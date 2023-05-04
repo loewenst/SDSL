@@ -1,0 +1,92 @@
+Basic premise:
+- Counter starts at zero, moves up with every correct answer.
+- A wrong answer ends the game.
+- Ten correct answers wins the game.
+- Each question will be randomly pulled from an array of questions.
+- Each question displays a lyric, and the correct answer is the band
+  that sang it.
+- Each question will come with four possible answers, one being correct.
+  - Post-MVP: Can we make the three alternate answers random?
+- Hovering over an answer highlights it.
+- Clicking an answer checks the answer against the correct answer.
+  - Post-MVP: Maybe introduce a delay, or a pop-up message asking to
+    confirm the answer, or both?
+- If the click is correct:
+  - Highlights the answer in color A.
+  - Moves the counter up if correct.
+  - Displays a winner message if the game has been won.
+  - Prompts for a comment on the lyric.
+    - Logs the comment on the 2nd html page.
+  - Else, remove the current question from play and switch to the
+    next question.
+    - Update all associated variables, including hints and comments.
+- If the click is incorrect:
+  -  Highlights the correct answer in color A, and the selected one in B.
+  - Displays a game over message.
+  - Prompts for a comment on the lyric.
+    - Logs the comment on the 2nd html page.
+  - Changes the color of the replay button to draw attention.
+    - Post-MVP: Maybe add a bounce effect.
+
+
+
+
+
+1. Init function should set counter array to all 0s, hints to 0, and randomly pull a question object with its lyric string, band name string, hints 1-4 and comment text and render the lyric, the choices and the hints tab.
+
+1a. The render function will have a subjunction that references a question object array, and whatever question object is randomly chosen, render will display the question.lyric, question.choice1, question.choice2, question.choice3 and question.choice4, as well as populate the hints tab buttons with displays for question.hint1, question.hint2, question.hint3 and question.hint4.
+
+1b. There will also be a render counter function in render that renders based on the values in the counter array - 0 will be empty, 1 will be filled in, -1 with be an X.
+
+1c. Another render function will set the messages for a win and lose scenario. This will be for a class that will get toggled if there's a win or lose event.
+
+1d. The hints tab will use an event listener to toggle a sidebar with four buttons, hints 1-4. Each button, when clicked, will drop down a different hint, increase the hints variable by 1, and disable the button. When the hints variable is greater than 4, the hints tab will display "No more hints left!" 
+
+2. We need event listeners for all four answers (or one that checks the ids of each), and the functions will check if the text of the clicked answer matches the correct text. (First, if (gameover) return)
+
+2a. If innerText of evt.target === question.correctAnswer:
+    - evt.target.style.backgroundColor = TBD (not sure evt.target will
+      work, need to play with it)
+    - first 0 in counter array becomes 1 (see Connect Four logic)
+    - render the counter
+    - if counter === [1,1,1,1,1,1,1,1,1,1]:
+      - set gameOver = true
+      - setTimeout for .5 seconds, then run win
+      - Win:
+        - toggle answer area to .win class
+        - set innerText of answer area to win message
+        - disable click for hints
+        - set replayButton color to TBD
+        - un-hide buttons for "comment" and "no thanks"
+        (- "no thanks" calls nextQuestion and hides both buttons)
+        (- "comment" links to 2nd page and autopopulates TBD based on
+          currentObject.correctAnswer, calls nextQuestion function and then hides both buttons)
+    - else:
+      - un-hide buttons for "comment" and "no thanks"
+      (- "no thanks" calls nextQuestion and hides both buttons)
+      (- "comment" links to 2nd page and autopopulates TBD based on
+          currentObject.correctAnswer, calls nextQuestion function and then hides both buttons)
+
+2b. nextQuestion function will:
+    - remove the current question from the object array
+    - set currentQuestion = another random question from the array
+      (might have to set the max for the range to be one less with each round, i.e. Math.random * (10-round))
+    - render the counter
+    - render the lyric, answers and hints, and modify the comment
+      button, referencing currentQuestion.property
+
+2c. If innerText of evt.target !== question.correctAnswer:
+    - evt.target.style.backgroundColor = Other TBD
+    - first 0 in counter array becomes -1
+    - setTimeout for .5 seconds, then lose
+    - Lose:
+      - set gameOver = true
+      - toggle answer area to .lose class
+      - set innerText of answer area to lose message
+      - disable click for hints
+      - render counter
+      - set replayButton color to TBD
+      - un-hide buttons for "comment" and "no thanks"
+      (- "no thanks" calls nextQuestion and hides both buttons)
+      (- "comment" links to 2nd page and autopopulates TBD based on
+          currentObject.correctAnswer, calls nextQuestion function and then hides both buttons)
