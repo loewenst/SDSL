@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: url(https://i.imgur.com/b4m7vyE.jpg);
+  height: 100vmin;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#hintbar {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(66, 64, 64);
+  opacity: 0.6;
+  width: 10vw;
+}
+#hintbar > button {
+height: 5vh;
+width: 8vh;
+margin-top: 2vh;
+margin-bottom: 2vh;
+}
+
+#scorebar {
+  align-self: flex-start;
+  display: flex;
+  position: absolute;
+  left: 5vmin;
+  bottom: 20vmin;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+#scorebar > div {
+  border: 1px solid rgb(65, 140, 202);
+  border-radius: 15%;
+  padding: 0;
+  margin: 1.5px;
+  height: 5vh;
+  width: 7vw;
+  color: white;
+
+}
+#reset {
+  position: absolute;
+  bottom: 4vmin;
+  left: 4vmin;
+
+}
+#difficulty {
+  position: absolute;
+  bottom: 4vmin;
+  right: 4vmin;
+}
+#popup {
+  position: absolute;
+  top: 33vh;
+  right: 40vw;
+  border: 3px solid white;
+  height: 15vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+}
+#gamespace {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#question {
+  width: 50vw;
+  height: 30vh;
+  border: 6px solid rgb(65, 140, 202);
+  border-radius: 35%;
+  background-color: aqua;
+  opacity: 0.6;
+}
