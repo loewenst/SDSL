@@ -31,12 +31,15 @@ button:hover {
   width: 5vw;
   position: absolute;
   top: 5vh;
-  right: 10vw;
+  right: 0vw;
   color: rgb(65, 140, 202);
   font-size: 4vh;
   font-family:'Dosis', sans-serif;
   text-align: center;
   padding-top: 2vh;
+}
+.showtogglehints {
+  right: 10vw;
 }
 #hintbar {
   position: absolute;
@@ -49,6 +52,7 @@ button:hover {
   background-color: rgb(66, 64, 64);
   opacity: 0.6;
   width: 10vw;
+  visibility: hidden;
 }
 #hintbar > button {
 height: 5vh;
@@ -63,7 +67,7 @@ margin-bottom: 2vh;
   position: absolute;
   left: 5vmin;
   bottom: 20vmin;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: flex-end;
   align-items: center;
 }
@@ -119,7 +123,7 @@ margin-bottom: 2vh;
   opacity: 0.9;
   text-align: center;
   color: white;
-  font-size: 7vh;
+  font-size: 5vh;
   font-family:'Dosis', sans-serif;
   display: flex;
   justify-content: center;
@@ -152,7 +156,7 @@ margin-bottom: 2vh;
   font-size: 10vh;
   font-family: 'Sigmar', cursive;
   position: absolute;
-  top: 40vh;
+  top: 25vh;
   text-align: center;
   color: white;
 }
