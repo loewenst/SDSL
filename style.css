@@ -55,10 +55,10 @@ button:hover {
   visibility: hidden;
 }
 #hintbar > button {
-height: 5vh;
-width: 8vh;
-margin-top: 2vh;
-margin-bottom: 2vh;
+  height: 5vh;
+  width: 8vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 #scorebar {
@@ -79,13 +79,13 @@ margin-bottom: 2vh;
   height: 5vh;
   width: 7vw;
   color: white;
-
+  
 }
 #reset {
   position: absolute;
   bottom: 4vmin;
   left: 4vmin;
-
+  
 }
 #difficulty {
   position: absolute;
@@ -123,7 +123,7 @@ margin-bottom: 2vh;
   opacity: 0.9;
   text-align: center;
   color: white;
-  font-size: 5vh;
+  font-size: 5vmin;
   font-family:'Dosis', sans-serif;
   display: flex;
   justify-content: center;
@@ -159,4 +159,19 @@ margin-bottom: 2vh;
   top: 25vh;
   text-align: center;
   color: white;
+}
+#haze {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.7;
+  background-color: rgb(62, 60, 60);
+}
+#play {
+  border-radius: 100%;
+  width: 15vmin;
+  height: 15vmin;
+  position: absolute;
+  top: 50%;
+  right: 50%;
 }

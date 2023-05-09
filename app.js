@@ -2,13 +2,14 @@
 /*
 Song Object Template:
 
-const song1 = {
+const song = {
   lyrics: '',
   choices: [],
   artist: ''
 }
 */
 
+//Song Object:
 const song1 = {
   lyrics:
     "Don't it make you sad to know that life </br> is more than who we are",
@@ -47,6 +48,35 @@ const song5 = {
   choices: ['Don Henley', 'U2', 'Panic! at the Disco', 'Green Day'],
   artist: 'Don Henley'
 }
+const song6 = {
+  lyrics: '',
+  choices: [],
+  artist: ''
+}
+
+const song7 = {
+  lyrics: '',
+  choices: [],
+  artist: ''
+}
+
+const song8 = {
+  lyrics: '',
+  choices: [],
+  artist: ''
+}
+
+const song9 = {
+  lyrics: '',
+  choices: [],
+  artist: ''
+}
+
+const song10 = {
+  lyrics: '',
+  choices: [],
+  artist: ''
+}
 
 const songObjects = [song1, song2, song3, song4, song5]
 const readyMesssages = ['Ready', 'Set', 'Go']
@@ -69,6 +99,7 @@ const choice3 = document.getElementById('answer3')
 const choice4 = document.getElementById('answer4')
 const scoreBarEls = [...document.getElementsByClassName('score')]
 const answerEls = [...document.getElementsByClassName('answer')]
+const startEls = [...document.getElementsByClassName('start')]
 
 //********************* Functions *********************
 
@@ -160,6 +191,9 @@ const renderScoreBar = () => {
 const render = () => {
   renderScoreBar()
   renderQuestion()
+  startEls.forEach((startEl) => {
+    startEl.style.visibility = 'hidden'
+  })
 }
 
 const init = () => {
@@ -167,11 +201,13 @@ const init = () => {
   hints = 4
   hardHints = false
   hardQuestions = false
-  render()
+  startEls.forEach((startEl) => {
+    startEl.style.visibility = 'visible'
+  })
 }
 
 init()
 
 //********************* Event Handlers *********************
-
+document.getElementById('play').addEventListener('click', render)
 document.getElementById('answerspace').addEventListener('click', choose)
