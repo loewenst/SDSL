@@ -117,6 +117,14 @@ margin-bottom: 2vh;
   border-radius: 15%;
   background-color: rgb(14, 39, 55);
   opacity: 0.9;
+  text-align: center;
+  color: white;
+  font-size: 7vh;
+  font-family:'Dosis', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
 }
 #answerspace {
   display: flex;
@@ -134,4 +142,17 @@ margin-bottom: 2vh;
   background-color: black;
   opacity: 0.8;
   margin-top: 2vh;
+  color: white;
+  text-align: center;
+  font-size: 3vh;
+  font-family:'Dosis', sans-serif;
+}
+#ready {
+  visibility: hidden;
+  font-size: 10vh;
+  font-family: 'Sigmar', cursive;
+  position: absolute;
+  top: 40vh;
+  text-align: center;
+  color: white;
 }
