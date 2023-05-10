@@ -174,7 +174,7 @@ button:hover {
 }
 .answer:hover {
   border: 3px solid gray;
-  background-color: grey;
+  background-color: grey !important;
   color: black;
 }
 
@@ -215,18 +215,14 @@ button:hover {
   text-align: center;
 }
 .bounce1 {
-  font-size: 20px;
-  width: 7vw;
-  height: 7vh;
-  transition-property: font-size, width, height;
+  transform: scale(1.5);
+  transition-property: transform;
   transition-timing-function: ease-in-out;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 .bounce2 {
-  font-size: 24px;
-  width: 5vw;
-  height: 5vh;
-  transition-property: font-size, width, height;
+transform: scale(1);
+  transition-property: transform;
   transition-timing-function: ease-in-out;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }

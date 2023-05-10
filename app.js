@@ -287,6 +287,7 @@ let hidePopUp = () => {
 
 //POPUP
 const displayHint = (evt) => {
+  popupSetting = 'hints'
   const hintIdx = hintEls.indexOf(evt.target)
   if (hintIdx === -1) return
   if (hintCount === 0) {
@@ -298,6 +299,7 @@ const displayHint = (evt) => {
   }
   popupEl.style.visibility = 'visible'
   nextEl.style.visibility = 'visible'
+  nextEl.innerHTML = 'Close Hint'
   commentEl.style.visibility = 'hidden'
   popupHeadingEl.innerHTML = currentSong.lyrics
   let hintArray = [hint1, hint2, hint3, hint4]
@@ -329,25 +331,26 @@ const nextQuestion = () => {
   renderQuestion()
 }
 
-//const bounce = (el) => {
-//  el.style.backgroundColor = 'rgb(231, 171, 67)'
-//  let count = 0
-//  let bounceLoop = setInterval(() => {
-//    count++
-//    if (count % 2 === 1) {
-//      el.classList.toggle('bounce1')
-//    } else {
-//      el.classList.toggle('bounce2')
-//    }
-//  }, 1500)
-//}
+const bounce = (el) => {
+  el.style.backgroundColor = 'rgb(231, 171, 67)'
+  let count = 0
+  let bounceLoop = setInterval(() => {
+    count += 1
+    if (count % 2 === 1) {
+      el.classList.toggle('bounce1')
+    } else {
+      el.classList.toggle('bounce2')
+    }
+  }, 500)
+}
 
 //POPUP
 const comment = () => {
+  hidePopUp()
   if (popupSetting === 'difficulty') {
     hardHints = false
-    hidePopUp()
     reset()
+    popupSetting = ''
     return
   }
 }
@@ -358,6 +361,7 @@ const changeDifficulty = () => {
   popupHeadingEl.innerHTML = 'DIFFICULTY SETTINGS'
   popupTextEl.innerHTML =
     'Use the buttons below to choose whether you want to have three hints for every question (easy mode), or only three hints for the whole game (hard mode).'
+  popupEl.style.visibility = 'visible'
   nextEl.innerText = 'Hard'
   nextEl.style.visibility = 'visible'
   commentEl.innerText = 'Easy'
@@ -390,8 +394,8 @@ const win = () => {
   difficultyEl.style.backgroundColor = 'rgb(231, 171, 67)'
   nextEl.style.visibility = 'hidden'
   commentEl.style.visibility = 'hidden'
-  //bounce(resetEl)
-  //bounce(difficultyEl)
+  bounce(resetEl)
+  bounce(difficultyEl)
 
   //play win music
   //change the color of the replay and difficulty buttons, maybe also an interval where they grow and shrink
@@ -408,18 +412,24 @@ const lose = () => {
   resetEl.style.backgroundColor = 'rgb(231, 171, 67)'
   nextEl.style.visibility = 'hidden'
   commentEl.style.visibility = 'hidden'
+  bounce(resetEl)
+
   //play lose music
   //change the color of the replay button, with interval
 }
 
 //POPUP
 const next = () => {
-  popupEl.style.visibility = 'hidden'
   renderScoreBar()
   hidePopUp()
   if (popupSetting === 'difficulty') {
     hardHints = true
     reset()
+    popupSetting = ''
+    return
+  }
+  if (popupSetting === 'hints') {
+    popupSetting = ''
     return
   }
   if (gameOver === 1) {
@@ -441,6 +451,7 @@ const displayExplainer = () => {
   popupHeadingEl.innerHTML = currentSong.explainer.heading
   popupTextEl.innerHTML = currentSong.explainer.text
   nextEl.style.visibility = 'visible'
+  nextEl.innerHTML = 'Next'
   commentEl.style.visibility = 'hidden'
 }
 
@@ -448,6 +459,7 @@ const choose = (evt) => {
   const answerIdx = answerEls.indexOf(evt.target)
   if (answerIdx === -1) return
   if (gameOver) return
+  popupSetting = ''
   //if (noClick) {
   //  answerEls.forEach((answerEl) => {
   //    answerEl.className = 'altanswer'
@@ -459,7 +471,6 @@ const choose = (evt) => {
   evt.target.style.borderColor = 'gray'
   evt.target.style.color = 'black'
   //audio.play() --> suspense music
-  console.log(evt.target.innerText)
   let currentScoreBox = scoreArray.indexOf(0)
   timer = setTimeout(() => {
     if (evt.target.innerText === currentSong.artist) {
@@ -544,6 +555,7 @@ const render = () => {
   renderScoreBar()
   renderQuestion()
   popupEl.style.visibility = 'hidden'
+  difficultyEl.style.visibility = 'hidden'
   startEls.forEach((startEl) => {
     startEl.style.visibility = 'hidden'
   })
