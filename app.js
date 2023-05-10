@@ -11,6 +11,10 @@ const song = {
     hint2: "",
     hint3: "",
     hint4: ""
+  },
+  explainer: {
+    heading: "",
+    text: ""
   }
 }
 */
@@ -33,6 +37,10 @@ const song1 = {
     hint3:
       "Here are the next lines of the song: </br> You grew up way too fast </br> And now there's nothing to believe </br> Then reruns all become our history </br> A tired song keeps playing on a tired radio </br> And I won't tell no one your name",
     hint4: 'Eventually this will be an audio clip.'
+  },
+  explainer: {
+    heading: 'Song: Name | Artist: The Goo Goo Dolls | Album: A Boy Named Goo',
+    text: 'This line always struck home because of the way it acknowledges that the things that are important to us in our own little lives probably seem petty and insignificant if we just draw back the lens and think beyond ourselves - but it doesn’t make the point in a moralizing way. It’s not saying, "Stop caring about the things that don’t matter,” it’s saying, hey, the fact that the things you care about don’t matter to the wider world - that really sucks, doesn’t it? And that’s so validating to hear.'
   }
 }
 const song2 = {
@@ -46,6 +54,10 @@ const song2 = {
     hint3:
       'The band was asked to produce a pop version of “Waving through the Window” by the writers of “Dear Evan Hansen."',
     hint4: 'Eventually this will be an image.'
+  },
+  explainer: {
+    heading: 'Song: Fireflies | Artist: Owl City | Album: Ocean Eyes',
+    text: 'It’s basically a signature for Owl City (a.k.a. Adam Young) to write songs that are optimistic, unjaded, and full of imagination and childlike wonder (a song about living underwater? He’s got it. Blasting off into space? He’s got it. A song about awkwardness talking to girls that still feels upbeat and innocent? He’s got it.). This line feels like a peek into the mind behind that signature - a mind flooded with so many hopes and ideas and excitement about the possibilities of the future that it feels like it could burst. To me, it lands as a reminder to tamp down the cynicism, and aspire for some of that wonder and excitement about the open future.'
   }
 }
 
@@ -58,6 +70,10 @@ const song3 = {
     hint2: '',
     hint3: '',
     hint4: ''
+  },
+  explainer: {
+    heading: 'Song: Pompeii | Artist: Bastille | Album: Bad Blood',
+    text: ''
   }
 }
 const song4 = {
@@ -75,6 +91,11 @@ const song4 = {
     hint2: '',
     hint3: '',
     hint4: ''
+  },
+  explainer: {
+    heading:
+      'Song: A Long December | Artist: Counting Crows | Album: Recovering the Satellites',
+    text: ''
   }
 }
 const song5 = {
@@ -87,6 +108,11 @@ const song5 = {
     hint2: '',
     hint3: '',
     hint4: ''
+  },
+  explainer: {
+    heading:
+      'Song: Dirty Laundry | Artist: Don Henley | Album: I Can’t Stand Still',
+    text: ''
   }
 }
 const song6 = {
@@ -99,6 +125,10 @@ const song6 = {
     hint2: '',
     hint3: '',
     hint4: ''
+  },
+  explainer: {
+    heading: 'Song: Dig | Artist: Incubus | Album: Light Grenades',
+    text: ''
   }
 }
 
@@ -111,6 +141,10 @@ const song7 = {
     hint2: '',
     hint3: '',
     hint4: ''
+  },
+  explainer: {
+    heading: 'Song: I Lived | Artist: OneRepublic | Album: Native',
+    text: ''
   }
 }
 
@@ -128,6 +162,11 @@ const song8 = {
     hint2: '',
     hint3: '',
     hint4: ''
+  },
+  explainer: {
+    heading:
+      'Song: Jack and Diane | Artist: John Mellencamp | Album: American Fool',
+    text: ''
   }
 }
 
@@ -141,6 +180,10 @@ const song9 = {
     hint2: '',
     hint3: '',
     hint4: ''
+  },
+  explainer: {
+    heading: 'Song: Whatever It Takes | Artist: Lifehouse | Album: Who We Are',
+    text: ''
   }
 }
 
@@ -153,10 +196,14 @@ const song10 = {
     hint2: '',
     hint3: '',
     hint4: ''
+  },
+  explainer: {
+    heading: 'Song: Mad Season | Artist: Matchbox 20 | Album: Mad Season',
+    text: ''
   }
 }
 
-const songObjects = [
+const songObjectsHardCode = [
   song1,
   song2,
   song3,
@@ -174,7 +221,7 @@ const readyMesssages = ['Ready', 'Set', 'Go']
 let score
 let scoreArray = []
 let answer = false
-let hints
+let hintCount
 let hintbar = false
 let hardHints = false
 let hardQuestions = false
@@ -183,6 +230,9 @@ let hint1
 let hint2
 let hint3
 let hint4
+let gameOver = 0
+let songObjects = [...songObjectsHardCode]
+let popupSetting
 //let noClick = false
 
 //********************* Cached Elements *********************
@@ -196,8 +246,14 @@ const scoreBarEls = [...document.getElementsByClassName('score')]
 const answerEls = [...document.getElementsByClassName('answer')]
 const startEls = [...document.getElementsByClassName('start')]
 const hintEls = [...document.getElementsByClassName('hint')]
-const popupTitleEl = document.getElementById('popupHeading')
+const popupEl = document.getElementById('popup')
+const popupHeadingEl = document.getElementById('popupHeading')
 const popupTextEl = document.getElementById('prompt')
+const popupEls = [...popupEl.childNodes]
+const resetEl = document.getElementById('reset')
+const difficultyEl = document.getElementById('difficulty')
+const nextEl = document.getElementById('next')
+const commentEl = document.getElementById('comment')
 
 //********************* Functions *********************
 
@@ -211,27 +267,50 @@ const shuffleArray = (array) => {
   }
 }
 
+let clearAnswerSpace = () => {
+  lyric.innerHTML = ''
+  answerEls.forEach((answerEl) => {
+    answerEl.style.backgroundColor = 'black'
+    answerEl.style.color = 'white'
+    answerEl.style.borderColor = 'rgb(65, 140, 202)'
+    answerEl.innerHTML = ''
+  })
+}
+
+let hidePopUp = () => {
+  popupEl.style.visibility = 'hidden'
+  //popupHeadingEl.style.visibility = 'hidden'
+  //popupTextEl.style.visibility = 'hidden'
+  nextEl.style.visibility = 'hidden'
+  commentEl.style.visibility = 'hidden'
+}
+
+//POPUP
 const displayHint = (evt) => {
   const hintIdx = hintEls.indexOf(evt.target)
-  console.log(hintIdx)
   if (hintIdx === -1) return
-  document.getElementById('popup').style.visibility = 'visible'
-  popupTitleEl.innerHTML = currentSong.lyrics
-  //popupTextEl.innerText = hint[hintIdx] hint[0] hint1
-
+  if (hintCount === 0) {
+    document.getElementById('nomorehints').style.visibility = 'visible'
+    setTimeout(() => {
+      document.getElementById('nomorehints').style.visibility = 'hidden'
+    }, 1000)
+    return
+  }
+  popupEl.style.visibility = 'visible'
+  nextEl.style.visibility = 'visible'
+  commentEl.style.visibility = 'hidden'
+  popupHeadingEl.innerHTML = currentSong.lyrics
   let hintArray = [hint1, hint2, hint3, hint4]
   popupTextEl.innerHTML = hintArray[hintIdx]
+  hintCount--
 }
 
 const toggleHints = () => {
-  console.log('click')
   if (hintbar === true) {
-    console.log('true')
     document.getElementById('hintbar').style.visibility = 'hidden'
     document.getElementById('togglehints').style.right = '0'
     hintbar = false
   } else if (hintbar === false) {
-    console.log('false')
     document.getElementById('hintbar').style.visibility = 'visible'
     document.getElementById('togglehints').style.right = '10vw'
     hintbar = true
@@ -240,27 +319,135 @@ const toggleHints = () => {
 
 const nextQuestion = () => {
   let currentSongId = songObjects.indexOf(currentSong)
+  //might not need the if, have to see if splice works on 0
   if (currentSongId === 0) {
     songObjects.shift()
   } else {
     songObjects.splice(currentSongId, 1)
   }
+  clearAnswerSpace()
+  renderQuestion()
+}
 
-  setTimeout(() => {
-    lyric.innerHTML = ''
-    answerEls.forEach((answerEl) => {
-      answerEl.style.backgroundColor = 'black'
-      answerEl.style.color = 'white'
-      answerEl.style.borderColor = 'rgb(65, 140, 202)'
-      answerEl.innerHTML = ''
-    })
-    render()
-  }, 1500)
+//const bounce = (el) => {
+//  el.style.backgroundColor = 'rgb(231, 171, 67)'
+//  let count = 0
+//  let bounceLoop = setInterval(() => {
+//    count++
+//    if (count % 2 === 1) {
+//      el.classList.toggle('bounce1')
+//    } else {
+//      el.classList.toggle('bounce2')
+//    }
+//  }, 1500)
+//}
+
+//POPUP
+const comment = () => {
+  if (popupSetting === 'difficulty') {
+    hardHints = false
+    hidePopUp()
+    reset()
+    return
+  }
+}
+
+//POPUP
+const changeDifficulty = () => {
+  popupSetting = 'difficulty'
+  popupHeadingEl.innerHTML = 'DIFFICULTY SETTINGS'
+  popupTextEl.innerHTML =
+    'Use the buttons below to choose whether you want to have three hints for every question (easy mode), or only three hints for the whole game (hard mode).'
+  nextEl.innerText = 'Hard'
+  nextEl.style.visibility = 'visible'
+  commentEl.innerText = 'Easy'
+  commentEl.style.visibility = 'visible'
+}
+
+const reset = () => {
+  scoreArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  renderScoreBar()
+  songObjects = [...songObjectsHardCode]
+  hintCount = 3
+  gameOver = 0
+  clearAnswerSpace()
+  resetEl.style.visibility = 'hidden'
+  difficultyEl.style.visibility = 'hidden'
+  startEls.forEach((startEl) => {
+    startEl.style.visibility = 'visible'
+  })
+}
+
+//POPUP
+const win = () => {
+  popupHeadingEl.innerHTML = 'CONGRATULATIONS! YOU WON!'
+  popupTextEl.innerHTML =
+    'I hope you found these lyrics as profound and hard-hitting as I did. </br></br></br> Play again to see even more lyrics! </br> Or, challenge yourself by tweaking the difficulty.'
+  popupEl.style.visibility = 'visible'
+  resetEl.style.visibility = 'visible'
+  resetEl.style.backgroundColor = 'rgb(231, 171, 67)'
+  difficultyEl.style.visibility = 'visible'
+  difficultyEl.style.backgroundColor = 'rgb(231, 171, 67)'
+  nextEl.style.visibility = 'hidden'
+  commentEl.style.visibility = 'hidden'
+  //bounce(resetEl)
+  //bounce(difficultyEl)
+
+  //play win music
+  //change the color of the replay and difficulty buttons, maybe also an interval where they grow and shrink
+  //
+}
+
+//POPUP
+const lose = () => {
+  popupHeadingEl.innerHTML = 'SORRY! BETTER LUCK NEXT TIME'
+  popupTextEl.innerHTML =
+    'I hope you found these lyrics as profound and hard-hitting as I did. </br></br></br> If you did, why not play again, </br>for a chance to see even more </br> Surprisingly Deep Song Lyrics!'
+  popupEl.style.visibility = 'visible'
+  resetEl.style.visibility = 'visible'
+  resetEl.style.backgroundColor = 'rgb(231, 171, 67)'
+  nextEl.style.visibility = 'hidden'
+  commentEl.style.visibility = 'hidden'
+  //play lose music
+  //change the color of the replay button, with interval
+}
+
+//POPUP
+const next = () => {
+  popupEl.style.visibility = 'hidden'
+  renderScoreBar()
+  hidePopUp()
+  if (popupSetting === 'difficulty') {
+    hardHints = true
+    reset()
+    return
+  }
+  if (gameOver === 1) {
+    win()
+  } else if (gameOver === -1) {
+    lose()
+  } else if (gameOver === 0) {
+    nextQuestion()
+  }
+  if (hintbar) {
+    toggleHints()
+    return
+  }
+}
+
+//POPUP
+const displayExplainer = () => {
+  popupEl.style.visibility = 'visible'
+  popupHeadingEl.innerHTML = currentSong.explainer.heading
+  popupTextEl.innerHTML = currentSong.explainer.text
+  nextEl.style.visibility = 'visible'
+  commentEl.style.visibility = 'hidden'
 }
 
 const choose = (evt) => {
   const answerIdx = answerEls.indexOf(evt.target)
   if (answerIdx === -1) return
+  if (gameOver) return
   //if (noClick) {
   //  answerEls.forEach((answerEl) => {
   //    answerEl.className = 'altanswer'
@@ -273,8 +460,8 @@ const choose = (evt) => {
   evt.target.style.color = 'black'
   //audio.play() --> suspense music
   console.log(evt.target.innerText)
+  let currentScoreBox = scoreArray.indexOf(0)
   timer = setTimeout(() => {
-    let currentScoreBox = scoreArray.indexOf(0)
     if (evt.target.innerText === currentSong.artist) {
       evt.target.style.backgroundColor = 'green'
       evt.target.style.borderColor = 'green'
@@ -291,13 +478,12 @@ const choose = (evt) => {
       })
       scoreArray[currentScoreBox] = -1
     }
-    if (scoreArray === [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]) {
-      win()
-    } else if (currentScoreBox === -1) {
-      lose()
-    } else {
-      nextQuestion()
+    if (scoreArray[9] === 1) {
+      gameOver = 1
+    } else if (scoreArray[currentScoreBox] === -1) {
+      gameOver = -1
     }
+    setTimeout(displayExplainer, 1000)
   }, 1500)
 }
 
@@ -306,13 +492,11 @@ const populateQuestion = () => {
   lyric.innerHTML = currentSong.lyrics
   let fourIntArray = [0, 1, 2, 3]
   shuffleArray(fourIntArray)
-  console.log(fourIntArray)
   choice1.innerText = currentSong.choices[fourIntArray[0]]
   choice2.innerText = currentSong.choices[fourIntArray[1]]
   choice3.innerText = currentSong.choices[fourIntArray[2]]
   choice4.innerText = currentSong.choices[fourIntArray[3]]
   shuffleArray(fourIntArray)
-  console.log(fourIntArray)
   hint1 = currentSong.hints[`hint${fourIntArray[0] + 1}`]
   hint2 = currentSong.hints[`hint${fourIntArray[1] + 1}`]
   hint3 = currentSong.hints[`hint${fourIntArray[2] + 1}`]
@@ -337,6 +521,9 @@ const renderQuestion = () => {
       //})
     }
   }, 750)
+  if (hardHints === false) {
+    hintCount = 3
+  }
   setTimeout(populateQuestion, 2250)
 }
 
@@ -346,6 +533,9 @@ const renderScoreBar = () => {
       scoreBarEl.style.backgroundColor = 'rgb(65, 140, 202)'
     } else if (scoreArray[idx] === -1) {
       scoreBarEl.innerText = 'X'
+    } else if (scoreArray[idx] === 0) {
+      scoreBarEl.style.backgroundColor = ''
+      scoreBarEl.innerText = ''
     }
   })
 }
@@ -353,6 +543,7 @@ const renderScoreBar = () => {
 const render = () => {
   renderScoreBar()
   renderQuestion()
+  popupEl.style.visibility = 'hidden'
   startEls.forEach((startEl) => {
     startEl.style.visibility = 'hidden'
   })
@@ -360,12 +551,13 @@ const render = () => {
 
 const init = () => {
   scoreArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  hints = 4
+  hintCount = 3
   hardHints = false
   hardQuestions = false
   startEls.forEach((startEl) => {
     startEl.style.visibility = 'visible'
   })
+  //clearInterval(bounceLoop)
 }
 
 init()
@@ -375,3 +567,9 @@ document.getElementById('play').addEventListener('click', render)
 document.getElementById('answerspace').addEventListener('click', choose)
 document.getElementById('togglehints').addEventListener('click', toggleHints)
 document.getElementById('hintbar').addEventListener('click', displayHint)
+document.getElementById('next').addEventListener('click', next)
+document.getElementById('reset').addEventListener('click', reset)
+document
+  .getElementById('difficulty')
+  .addEventListener('click', changeDifficulty)
+document.getElementById('comment').addEventListener('click', comment)

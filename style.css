@@ -86,20 +86,27 @@ button:hover {
 #reset {
   position: absolute;
   bottom: 4vmin;
-  left: 4vmin;
+  right: 18vmin;
+  width: 5vw;
+  visibility: hidden;
+  font-size: 14px;
+  height: 5vh;
   
 }
 #difficulty {
   position: absolute;
   bottom: 4vmin;
   right: 4vmin;
+  width: 5vw;
+  font-size: 14px;
+  height: 5vh;
 }
 #popup {
   position: absolute;
-  top: 20vh;
-  right: 28vw;
-  height: 44vh;
-  width: 44vw;
+  top: 16vh;
+  right: 23vw;
+  height: 54vh;
+  width: 54vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -194,4 +201,32 @@ button:hover {
   position: absolute;
   top: 45%;
   right: 45vw;
+}
+#nomorehints {
+  visibility: hidden;
+  position: absolute;
+  background-color: red;
+  color: black;
+  height: 25px;
+  font-size: 20px;
+  top: 45%;
+  width: 40vw;
+  right: 30vw;
+  text-align: center;
+}
+.bounce1 {
+  font-size: 20px;
+  width: 7vw;
+  height: 7vh;
+  transition-property: font-size, width, height;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+}
+.bounce2 {
+  font-size: 24px;
+  width: 5vw;
+  height: 5vh;
+  transition-property: font-size, width, height;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
 }
