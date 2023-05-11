@@ -73,7 +73,7 @@ const song3 = {
   },
   explainer: {
     heading: 'Song: Pompeii | Artist: Bastille | Album: Bad Blood',
-    text: ''
+    text: `Tragedy is a part of life. It happens to everyone at some point, even if not usually on the scale of Pompeii getting obliterated by a volcano. And sometimes the tragedy just happens, but sometimes it feels like we bring it on ourselves, because of our bad decisions, karma, or whatever it is. And when you’re picking up the pieces after that kind of tragedy, boy does this question pack a punch. Do I start with figuring out the logistics of my life that have to change? Find a new place, get a new job, get back in the dating scene? Or do I start with my attitude, my selfishness, my fear of commitment, or whatever landed me there? What’s the bigger fire, the outcome or the cause? And what’s the bigger tragedy? Where do we begin?`
   }
 }
 const song4 = {
@@ -95,7 +95,7 @@ const song4 = {
   explainer: {
     heading:
       'Song: A Long December | Artist: Counting Crows | Album: Recovering the Satellites',
-    text: ''
+    text: 'This line captures a crazy thing about being human: just because you were there doesn’t mean you experienced it. Even in the very best or most important moments, if you’re not present, if you’re consumed with something else, dwelling on the past or worrying about the future, then you miss it. But even if you know it, that doesn’t make it easy. You can try and try to be present and fail, and feel like the best things are passing you by but you can’t get out of your head long enough to feel them. We just gotta keep trying. (And meditate!)'
   }
 }
 const song5 = {
@@ -113,7 +113,8 @@ const song5 = {
   explainer: {
     heading:
       'Song: Dirty Laundry | Artist: Don Henley | Album: I Can’t Stand Still',
-    text: ''
+    text: `This song, which is a cutting indictment of the news media, feels like it could’ve been written yesterday as easily as 1982. Henley calls out the industry for the fact that it has a built-in incentive to report tragic, scandalous or otherwise sensational news, and thus warps the ways news personnel experience all those things. The song implicitly calls for us to figure out a way for the news media to be able to inform while also being able to stay human.
+    `
   }
 }
 const song6 = {
@@ -131,7 +132,7 @@ const song6 = {
   },
   explainer: {
     heading: 'Song: Dig | Artist: Incubus | Album: Light Grenades',
-    text: ''
+    text: `We’re never the same person all the time with everyone in every situation. And sometimes who we are at a given point in time can be a little ugly. Or a lot. But if we’re lucky, we have people in our lives that can see through who we happen to be at our low points, to who we were before, or who we are at our best, or who we could be. And if we’re really lucky, they can help us find our way back or our way out. This song celebrates having that kind of relationship.`
   }
 }
 
@@ -148,7 +149,7 @@ const song7 = {
   },
   explainer: {
     heading: 'Song: I Lived | Artist: OneRepublic | Album: Native',
-    text: ''
+    text: `This clever play on words, paradoxically wishing for us to have more after we spend everything, is a nod to two pitfalls in life: one, letting our time go by instead of <i>spending</i> it - using it, and choosing how we use it - and two, regretting our experiences because they don’t fit the narrative we want ourselves to have, instead of appreciating them as part of ourselves, the threads that add up to the tapestries of our lives. Here’s to hoping we navigate those pitfalls, we grab life by the horns, and we love the ride for what it is.`
   }
 }
 
@@ -172,7 +173,7 @@ const song8 = {
   explainer: {
     heading:
       'Song: Jack and Diane | Artist: John Mellencamp | Album: American Fool',
-    text: ''
+    text: `I must have heard this song fifty times before I really paid attention to these words - the wistful, folksy tone of the music doesn’t lead you to expect lyrics that are so heavy. The song is about two high school sweethearts growing up, and the fun and optimism and ambition of being a teenager that disappears as you get older, and how we might all try “holding on to sixteen as long as you can” (another line from the song), but we all have to come to terms with that. (Which makes it wonderfully ironic that Jessica Simpson sampled this track for a bubblegum pop love song.)`
   }
 }
 

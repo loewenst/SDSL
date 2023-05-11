@@ -86,7 +86,7 @@ button:hover {
 #reset {
   position: absolute;
   bottom: 25px;
-  right: 150px;
+  right: 175px;
   width: 100px;
   visibility: hidden;
   font-size: 14px;
@@ -175,7 +175,7 @@ button:hover {
   flex-direction: row;
   flex-wrap: wrap;
   width: 50vw;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 10vh;
 }
 .answer {
