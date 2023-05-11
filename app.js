@@ -270,23 +270,24 @@ const shuffleArray = (array) => {
 let clearAnswerSpace = () => {
   lyric.innerHTML = ''
   answerEls.forEach((answerEl) => {
-    answerEl.style.backgroundColor = 'black'
-    answerEl.style.color = 'white'
-    answerEl.style.borderColor = 'rgb(65, 140, 202)'
+    answerEl.className = 'answer'
+    //answerEl.style.backgroundColor = 'black'
+    //answerEl.style.color = 'white'
+    //answerEl.style.borderColor = 'rgb(65, 140, 202)'
     answerEl.innerHTML = ''
   })
 }
 
 let hidePopUp = () => {
   popupEl.style.visibility = 'hidden'
-  //popupHeadingEl.style.visibility = 'hidden'
-  //popupTextEl.style.visibility = 'hidden'
   nextEl.style.visibility = 'hidden'
   commentEl.style.visibility = 'hidden'
 }
 
 //POPUP
 const displayHint = (evt) => {
+  if (popupSetting === 'explainer') return
+  if (popupSetting === 'difficulty') return
   popupSetting = 'hints'
   const hintIdx = hintEls.indexOf(evt.target)
   if (hintIdx === -1) return
@@ -369,6 +370,7 @@ const changeDifficulty = () => {
 }
 
 const reset = () => {
+  hidePopUp()
   scoreArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   renderScoreBar()
   songObjects = [...songObjectsHardCode]
@@ -419,6 +421,8 @@ const lose = () => {
 }
 
 //POPUP
+//This is code for a multi-functional button that will change
+//depending on which popup is displaying
 const next = () => {
   renderScoreBar()
   hidePopUp()
@@ -437,6 +441,7 @@ const next = () => {
   } else if (gameOver === -1) {
     lose()
   } else if (gameOver === 0) {
+    popupSetting = ''
     nextQuestion()
   }
   if (hintbar) {
@@ -447,6 +452,7 @@ const next = () => {
 
 //POPUP
 const displayExplainer = () => {
+  popupSetting = 'explainer'
   popupEl.style.visibility = 'visible'
   popupHeadingEl.innerHTML = currentSong.explainer.heading
   popupTextEl.innerHTML = currentSong.explainer.text
@@ -459,32 +465,25 @@ const choose = (evt) => {
   const answerIdx = answerEls.indexOf(evt.target)
   if (answerIdx === -1) return
   if (gameOver) return
+  hidePopUp()
   popupSetting = ''
-  //if (noClick) {
-  //  answerEls.forEach((answerEl) => {
-  //    answerEl.className = 'altanswer'
-  //  })
-  //  return
-  //}
-  //noClick = true
-  evt.target.style.backgroundColor = 'gray'
-  evt.target.style.borderColor = 'gray'
-  evt.target.style.color = 'black'
+  evt.target.className = 'selectedAnswer'
   //audio.play() --> suspense music
   let currentScoreBox = scoreArray.indexOf(0)
   timer = setTimeout(() => {
     if (evt.target.innerText === currentSong.artist) {
-      evt.target.style.backgroundColor = 'green'
-      evt.target.style.borderColor = 'green'
+      evt.target.className = 'correctAnswer'
       scoreArray[currentScoreBox] = 1
       //play a cheer
     } else {
-      evt.target.style.backgroundColor = 'rgb(243, 205, 139)'
-      evt.target.style.borderColor = 'rgb(243, 205, 139)'
+      evt.target.className = 'wrongAnswer'
+      //evt.target.style.backgroundColor = 'rgb(243, 205, 139)'
+      //evt.target.style.borderColor = 'rgb(243, 205, 139)'
       answerEls.forEach((answerEl) => {
         if (answerEl.innerText === currentSong.artist) {
-          answerEl.style.backgroundColor = 'green'
-          answerEl.style.borderColor = 'green'
+          answerEl.className = 'correctAnswer'
+          //answerEl.style.backgroundColor = 'green'
+          //answerEl.style.borderColor = 'green'
         }
       })
       scoreArray[currentScoreBox] = -1

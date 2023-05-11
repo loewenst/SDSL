@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  font-family:'Dosis', sans-serif;
+}
+body {
+  background-image: url(https://i.imgur.com/b4m7vyE.jpg);
+  height: 100vmin;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  font-size: 5vh;
+  font-weight: bold;
+  color: rgb(65, 140, 202);
+  text-align: center;
+}
+
+section {
+  padding-top: 18vh;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 5% 5% 5% 5% 1fr 5% 5% 5% 5%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 15px;
+}
+
+div {
+  color: white;
+  height: 60px;
+  text-align: center;
+  border: 3px solid rgb(120, 183, 235);
+  border-radius: 10%;
+  background-color: rgb(22, 11, 100);
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#howto {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+#about {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+#play {
+  margin-top: 5vh;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  height: 30vh;
+  border-width: 6px;
+  border-radius: 55%;
+  opacity: 0.9;
+  text-align: center;
+  font-size: 5vmin;
+  align-self: stretch;
+}
+#contact {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+}
+#discuss{
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
