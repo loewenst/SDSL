@@ -33,9 +33,9 @@ const song1 = {
   hints: {
     hint1: 'This song was released in September 1995.',
     hint2:
-      'The band’s biggest hit was part of the soundtrack for ‘City of Angels.’',
+      'The band’s biggest hit was part of the soundtrack for <i>City of Angels</i>.',
     hint3:
-      "Here are the next lines of the song: </br> You grew up way too fast </br> And now there's nothing to believe </br> Then reruns all become our history </br> A tired song keeps playing on a tired radio </br> And I won't tell no one your name",
+      "Here are some other lyrics from the song: </br></br> You grew up way too fast </br> And now there's nothing to believe </br> Then reruns all become our history </br> A tired song keeps playing on a tired radio </br> And I won't tell no one your name",
     hint4: 'Eventually this will be an audio clip.'
   },
   explainer: {
@@ -50,9 +50,9 @@ const song2 = {
   hints: {
     hint1: `This song was inspired by the singer's insomnia.`,
     hint2:
-      'Here are some other lyrics from the song: </br> A foxtrot above my head </br> A sock hop beneath my bed </br> A disco ball is just hanging by a thread',
+      'Here are some other lyrics from the song: </br></br> A foxtrot above my head </br> A sock hop beneath my bed </br> A disco ball is just hanging by a thread',
     hint3:
-      'The band was asked to produce a pop version of “Waving through the Window” by the writers of “Dear Evan Hansen."',
+      'The artist was asked to produce a pop version of “Waving through the Window” by the writers of “Dear Evan Hansen."',
     hint4: 'Eventually this will be an image.'
   },
   explainer: {
@@ -66,10 +66,10 @@ const song3 = {
   choices: ['Creed', 'Bastille', 'Imagine Dragons', 'Panic! at the Disco'],
   artist: 'Bastille',
   hints: {
-    hint1: '',
-    hint2: '',
-    hint3: '',
-    hint4: ''
+    hint1: `Another of the band's singles featured Marshmello.`,
+    hint2: 'This song was released in 2013 and is named after an ancient city.',
+    hint3: `Here are some other lyrics from the song: </br></br>And if you close your eyes</br>Does it almost feel like you've been here before? </br>How am I gonna be an optimist about this?`,
+    hint4: 'This will be an audio file.'
   },
   explainer: {
     heading: 'Song: Pompeii | Artist: Bastille | Album: Bad Blood',
@@ -87,10 +87,10 @@ const song4 = {
   ],
   artist: 'Counting Crows',
   hints: {
-    hint1: '',
-    hint2: '',
-    hint3: '',
-    hint4: ''
+    hint1: 'The music video for this song features Courteney Cox.',
+    hint2: `Some of the band's other singles include "Round Here" and "Mr. Jones."`,
+    hint3: `Here are some other lyrics from the song: </br></br> And it's one more day up in the canyons </br>And it's one more night in Hollywood </br>If you think that I could be forgiven</br>I wish you would`,
+    hint4: 'This will be an audio file.'
   },
   explainer: {
     heading:
@@ -104,10 +104,11 @@ const song5 = {
   choices: ['Don Henley', 'U2', 'Panic! at the Disco', 'Green Day'],
   artist: 'Don Henley',
   hints: {
-    hint1: '',
-    hint2: '',
-    hint3: '',
-    hint4: ''
+    hint1:
+      'The singer was also part of the band that sang <i>Hotel California</i>.',
+    hint2: `Some of the artist's other singles include "The End of the Innocence" and "The Last Worthless Evening."`,
+    hint3: `Here are some other lyrics from the song: </br></br>Kick 'em when they're up </br> Kick 'em when they're down </br> Kick 'em when they're up </br> Kick 'em all around`,
+    hint4: 'This will be an audio file.'
   },
   explainer: {
     heading:
@@ -121,10 +122,12 @@ const song6 = {
   choices: ['Incubus', 'Panic! at the Disco', 'Hoobastank', '3 Doors Down'],
   artist: 'Incubus',
   hints: {
-    hint1: '',
-    hint2: '',
-    hint3: '',
-    hint4: ''
+    hint1: `Some of the artist's albums include <i>Make Yourself</i> and <i>Morning View</i>.`,
+    hint2:
+      'The lead singer of the group is also skilled at painting, and has published collections of his artwork.',
+    hint3: `Here are some other lyrics from the song: </br></br>Sing this song </br> Remind me that we'll always have each other </br>
+    When everything else is gone`,
+    hint4: 'This will be an image file.'
   },
   explainer: {
     heading: 'Song: Dig | Artist: Incubus | Album: Light Grenades',
@@ -137,10 +140,11 @@ const song7 = {
   choices: ['Jason Mraz', 'Imagine Dragons', 'OneRepublic', 'Matchbox 20'],
   artist: 'OneRepublic',
   hints: {
-    hint1: '',
-    hint2: '',
-    hint3: '',
-    hint4: ''
+    hint1: `The artist's first hit single was mixed and released by Timbaland.`,
+    hint2: `Some of the artist's albums include <i>Dreaming Out Loud</i>, <i>Oh My My</i> and <i>Waking Up</i>.`,
+    hint3: `Here are some other lyrics from the song: </br></br>I owned every second that this world could give</br>I saw so many places, the things that I did </br> Yeah, with every broken bone </br>
+    I swear I lived`,
+    hint4: 'This will be am image file.'
   },
   explainer: {
     heading: 'Song: I Lived | Artist: OneRepublic | Album: Native',
@@ -158,10 +162,12 @@ const song8 = {
   ],
   artist: 'John Mellencamp',
   hints: {
-    hint1: '',
-    hint2: '',
-    hint3: '',
-    hint4: ''
+    hint1: `Some of the artist's other songs include <i>Pink Houses</i> and <i>Hurts So Good</i>.`,
+    hint2:
+      'The artist cofounded Farmer Aid, which has raised over $60 million for farm families.',
+    hint3: `Here are some other lyrics from the song: </br></br> Holdin' on to sixteen as long as you can </br> Change is coming 'round real soon </br>
+    Make us women and men`,
+    hint4: 'This will be an image file.'
   },
   explainer: {
     heading:
@@ -176,10 +182,10 @@ const song9 = {
   choices: ['Lifehouse', '*N SYNC', 'Maroon 5', 'John Legend'],
   artist: 'Lifehouse',
   hints: {
-    hint1: '',
-    hint2: '',
-    hint3: '',
-    hint4: ''
+    hint1: `The artist's first album was <i>No Name Face</i>.`,
+    hint2: `Several of the artist's songs were featured on the show <i>Smallville</i>.`,
+    hint3: `Here are some other lyrics from the song: </br></br>I know what's at stake </br>I know that I've let you down </br> And if you give me a chance </br>Believe that I can change </br> I'll keep us together`,
+    hint4: 'This will be an audio sample.'
   },
   explainer: {
     heading: 'Song: Whatever It Takes | Artist: Lifehouse | Album: Who We Are',
@@ -189,13 +195,14 @@ const song9 = {
 
 const song10 = {
   lyrics: "You don't know me now </br> I kinda thought that you should somehow",
-  choices: ['Simple Plan', 'Justin Bieber', 'Matchbox 20', 'The Weeknd'],
+  choices: ['Nickelback', 'Justin Bieber', 'Matchbox 20', 'The Weeknd'],
   artist: 'Matchbox 20',
   hints: {
-    hint1: '',
-    hint2: '',
-    hint3: '',
-    hint4: ''
+    hint1:
+      'The singer of this song collaborated with Santana, making a track that won three Grammys and <i>Billboard</i> lists as the third most-successful song ever.',
+    hint2: `The artist's debut album was <i>Yourself or Someone Like You</i>.`,
+    hint3: `Here are some other lyrics from the song: </br></br>Do you think you can cope? </br> You figured me out </br>That I'm lost and I'm hopeless </br>I'm bleeding and broken </br> Though I've never spoken </br> I come undone`,
+    hint4: 'This will be an audio sample.'
   },
   explainer: {
     heading: 'Song: Mad Season | Artist: Matchbox 20 | Album: Mad Season',
@@ -437,8 +444,10 @@ const next = () => {
     return
   }
   if (gameOver === 1) {
+    popupSetting = ''
     win()
   } else if (gameOver === -1) {
+    popupSetting = ''
     lose()
   } else if (gameOver === 0) {
     popupSetting = ''
