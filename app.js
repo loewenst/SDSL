@@ -243,6 +243,7 @@ let hint4
 let gameOver = 0
 let songObjects = [...songObjectsHardCode]
 let popupSetting
+let canChoose
 
 //********************* Cached Elements *********************
 const readyMessageEl = document.getElementById('ready')
@@ -280,9 +281,6 @@ let clearAnswerSpace = () => {
   lyric.innerHTML = ''
   answerEls.forEach((answerEl) => {
     answerEl.className = 'answer'
-    //answerEl.style.backgroundColor = 'black'
-    //answerEl.style.color = 'white'
-    //answerEl.style.borderColor = 'rgb(65, 140, 202)'
     answerEl.innerHTML = ''
   })
 }
@@ -331,7 +329,6 @@ const toggleHints = () => {
 
 const nextQuestion = () => {
   let currentSongId = songObjects.indexOf(currentSong)
-  //might not need the if, have to see if splice works on 0
   if (currentSongId === 0) {
     songObjects.shift()
   } else {
@@ -476,11 +473,13 @@ const choose = (evt) => {
   const answerIdx = answerEls.indexOf(evt.target)
   if (answerIdx === -1) return
   if (gameOver) return
+  if (canChoose === false) return
   hidePopUp()
   popupSetting = ''
   evt.target.className = 'selectedAnswer'
   //audio.play() --> suspense music
   let currentScoreBox = scoreArray.indexOf(0)
+  canChoose = false
   timer = setTimeout(() => {
     if (evt.target.innerText === currentSong.artist) {
       evt.target.className = 'correctAnswer'
@@ -508,7 +507,12 @@ const choose = (evt) => {
   }, 1500)
 }
 
+const noChoose = () => {
+  canChoose = false
+}
+
 const populateQuestion = () => {
+  canChoose = true
   currentSong = songObjects[Math.floor(Math.random() * songObjects.length)]
   lyric.innerHTML = currentSong.lyrics
   let fourIntArray = [0, 1, 2, 3]
@@ -532,14 +536,9 @@ const renderQuestion = () => {
     count++
     if (count < 3) {
       readyMessageEl.innerText = readyMesssages[count]
-      //play a beep
     } else {
       clearInterval(timer)
       readyMessageEl.style.visibility = 'hidden'
-      //noClick = false
-      //answerEls.forEach((answerEl) => {
-      //  answerEl.className = 'answer'
-      //})
     }
   }, 750)
   if (hardHints === false) {
