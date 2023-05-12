@@ -37,16 +37,12 @@ const popupHTML = document.getElementById('inside')
 const playButton = document.getElementById('play')
 
 const displayPopup = (evt) => {
-  console.log('click')
   let popupIdx = popupObjects.indexOf(eval(evt.target.id))
-  console.log(popupIdx)
   if (popupIdx === -1) return
   popup.style.visibility = 'visible'
   popupTitle.innerHTML = popupObjects[popupIdx].Title
   popupHTML.innerHTML = popupObjects[popupIdx].InnerHTML
 }
-console.log(popupObjects.indexOf('howto'))
-console.log(popupObjects.indexOf(howto))
 
 const close = () => {
   popup.style.visibility = 'hidden'
