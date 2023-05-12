@@ -244,6 +244,9 @@ const songObjectsHardCode = [
   song10
 ]
 const readyMesssages = ['Ready', 'Set', 'Go']
+const reveal = new Audio('audio/Answer Reveal.wav')
+const rightAudio = new Audio('audio/Correct Answer.wav')
+const wrongAudio = new Audio('audio/Wrong Answer.wav')
 
 //********************* State Variables *********************
 let score
@@ -424,8 +427,6 @@ const win = () => {
   bounce(difficultyEl)
 
   //play win music
-  //change the color of the replay and difficulty buttons, maybe also an interval where they grow and shrink
-  //
 }
 
 //POPUP
@@ -441,7 +442,6 @@ const lose = () => {
   bounce(resetEl)
 
   //play lose music
-  //change the color of the replay button, with interval
 }
 
 //POPUP
@@ -495,26 +495,23 @@ const choose = (evt) => {
   hidePopUp()
   popupSetting = ''
   evt.target.className = 'selectedAnswer'
-  //audio.play() --> suspense music
   let currentScoreBox = scoreArray.indexOf(0)
   canChoose = false
+  reveal.play()
   timer = setTimeout(() => {
     if (evt.target.innerText === currentSong.artist) {
       evt.target.className = 'correctAnswer'
       scoreArray[currentScoreBox] = 1
-      //play a cheer
+      rightAudio.play()
     } else {
       evt.target.className = 'wrongAnswer'
-      //evt.target.style.backgroundColor = 'rgb(243, 205, 139)'
-      //evt.target.style.borderColor = 'rgb(243, 205, 139)'
       answerEls.forEach((answerEl) => {
         if (answerEl.innerText === currentSong.artist) {
           answerEl.className = 'correctAnswer'
-          //answerEl.style.backgroundColor = 'green'
-          //answerEl.style.borderColor = 'green'
         }
       })
       scoreArray[currentScoreBox] = -1
+      wrongAudio.play()
     }
     if (scoreArray[9] === 1) {
       gameOver = 1
@@ -522,7 +519,7 @@ const choose = (evt) => {
       gameOver = -1
     }
     setTimeout(displayExplainer, 1000)
-  }, 1500)
+  }, 3000)
 }
 
 const noChoose = () => {
