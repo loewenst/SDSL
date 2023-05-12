@@ -36,7 +36,10 @@ const song1 = {
       'The band’s biggest hit was part of the soundtrack for <i>City of Angels</i>.',
     hint3:
       "Here are some other lyrics from the song: </br></br> You grew up way too fast </br> And now there's nothing to believe </br> Then reruns all become our history </br> A tired song keeps playing on a tired radio </br> And I won't tell no one your name",
-    hint4: 'Eventually this will be an audio clip.'
+    hint4: `Here is a clip from the song:</br></br></br><audio controls>
+    <source src="audio/Name Hint.wav" type="audio/wav">
+  Your browser does not support the audio element.
+  </audio>`
   },
   explainer: {
     heading: 'Song: Name | Artist: The Goo Goo Dolls | Album: A Boy Named Goo',
@@ -53,7 +56,7 @@ const song2 = {
       'Here are some other lyrics from the song: </br></br> A foxtrot above my head </br> A sock hop beneath my bed </br> A disco ball is just hanging by a thread',
     hint3:
       'The artist was asked to produce a pop version of “Waving through the Window” by the writers of “Dear Evan Hansen."',
-    hint4: 'Eventually this will be an image.'
+    hint4: `Here is an image from the music video: </br></br><img src="images/Fireflies Robot.png" width="400px">`
   },
   explainer: {
     heading: 'Song: Fireflies | Artist: Owl City | Album: Ocean Eyes',
@@ -69,7 +72,10 @@ const song3 = {
     hint1: `Another of the band's singles featured Marshmello.`,
     hint2: 'This song was released in 2013 and is named after an ancient city.',
     hint3: `Here are some other lyrics from the song: </br></br>And if you close your eyes</br>Does it almost feel like you've been here before? </br>How am I gonna be an optimist about this?`,
-    hint4: 'This will be an audio file.'
+    hint4: `Here is a clip from the song:</br></br></br><audio controls>
+    <source src="audio/Pompeii Hint.wav" type="audio/wav">
+  Your browser does not support the audio element.
+  </audio>`
   },
   explainer: {
     heading: 'Song: Pompeii | Artist: Bastille | Album: Bad Blood',
@@ -90,7 +96,10 @@ const song4 = {
     hint1: 'The music video for this song features Courteney Cox.',
     hint2: `Some of the band's other singles include "Round Here" and "Mr. Jones."`,
     hint3: `Here are some other lyrics from the song: </br></br> And it's one more day up in the canyons </br>And it's one more night in Hollywood </br>If you think that I could be forgiven</br>I wish you would`,
-    hint4: 'This will be an audio file.'
+    hint4: `Here is a clip from the song:</br></br></br><audio controls>
+    <source src="audio/Long December Hint.wav" type="audio/wav">
+  Your browser does not support the audio element.
+  </audio>`
   },
   explainer: {
     heading:
@@ -108,7 +117,10 @@ const song5 = {
       'The singer was also part of the band that sang <i>Hotel California</i>.',
     hint2: `Some of the artist's other singles include "The End of the Innocence" and "The Last Worthless Evening."`,
     hint3: `Here are some other lyrics from the song: </br></br>Kick 'em when they're up </br> Kick 'em when they're down </br> Kick 'em when they're up </br> Kick 'em all around`,
-    hint4: 'This will be an audio file.'
+    hint4: `Here is a clip from the song:</br></br></br><audio controls>
+    <source src="audio/Dirty Laundry Hint.wav" type="audio/wav">
+  Your browser does not support the audio element.
+  </audio>`
   },
   explainer: {
     heading:
@@ -128,7 +140,7 @@ const song6 = {
       'The lead singer of the group is also skilled at painting, and has published collections of his artwork.',
     hint3: `Here are some other lyrics from the song: </br></br>Sing this song </br> Remind me that we'll always have each other </br>
     When everything else is gone`,
-    hint4: 'This will be an image file.'
+    hint4: `Here is an image from the music video: </br></br><img src="images/Dig Image.jpeg" width="400px">`
   },
   explainer: {
     heading: 'Song: Dig | Artist: Incubus | Album: Light Grenades',
@@ -145,7 +157,7 @@ const song7 = {
     hint2: `Some of the artist's albums include <i>Dreaming Out Loud</i>, <i>Oh My My</i> and <i>Waking Up</i>.`,
     hint3: `Here are some other lyrics from the song: </br></br>I owned every second that this world could give</br>I saw so many places, the things that I did </br> Yeah, with every broken bone </br>
     I swear I lived`,
-    hint4: 'This will be am image file.'
+    hint4: `Here is an image from the music video: </br></br><img src="images/I Lived Image.jpeg" width="400px">`
   },
   explainer: {
     heading: 'Song: I Lived | Artist: OneRepublic | Album: Native',
@@ -168,7 +180,7 @@ const song8 = {
       'The artist cofounded Farmer Aid, which has raised over $60 million for farm families.',
     hint3: `Here are some other lyrics from the song: </br></br> Holdin' on to sixteen as long as you can </br> Change is coming 'round real soon </br>
     Make us women and men`,
-    hint4: 'This will be an image file.'
+    hint4: `Here is an image from the music video: </br></br><img src="images/Jack and Diane Image.png" width="400px">`
   },
   explainer: {
     heading:
@@ -186,7 +198,10 @@ const song9 = {
     hint1: `The artist's first album was <i>No Name Face</i>.`,
     hint2: `Several of the artist's songs were featured on the show <i>Smallville</i>.`,
     hint3: `Here are some other lyrics from the song: </br></br>I know what's at stake </br>I know that I've let you down </br> And if you give me a chance </br>Believe that I can change </br> I'll keep us together`,
-    hint4: 'This will be an audio sample.'
+    hint4: `Here is a clip from the song:</br></br></br><audio controls>
+    <source src="audio/Whatever It Takes Hint.wav" type="audio/wav">
+  Your browser does not support the audio element.
+  </audio>`
   },
   explainer: {
     heading: 'Song: Whatever It Takes | Artist: Lifehouse | Album: Who We Are',
@@ -205,7 +220,10 @@ const song10 = {
       'The singer of this song collaborated with Santana, making a track that won three Grammys and <i>Billboard</i> lists as the third most-successful song ever.',
     hint2: `The artist's debut album was <i>Yourself or Someone Like You</i>.`,
     hint3: `Here are some other lyrics from the song: </br></br>Do you think you can cope? </br> You figured me out </br>That I'm lost and I'm hopeless </br>I'm bleeding and broken </br> Though I've never spoken </br> I come undone`,
-    hint4: 'This will be an audio sample.'
+    hint4: `Here is a clip from the song:</br></br></br><audio controls>
+    <source src="audio/Mad Season Hint.wav" type="audio/wav">
+  Your browser does not support the audio element.
+  </audio>`
   },
   explainer: {
     heading: 'Song: Mad Season | Artist: Matchbox 20 | Album: Mad Season',
