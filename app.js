@@ -190,7 +190,9 @@ const song9 = {
   },
   explainer: {
     heading: 'Song: Whatever It Takes | Artist: Lifehouse | Album: Who We Are',
-    text: ''
+    text: `
+    A huge part of being a good friend or partner is listening, supporting, encouraging, and bringing the fun and good vibes to the relationship. But that's one sided, even if it is the "nicer," giving side. In the deepest relationships, both sides have to be generous enough to be there when needed, <i>and</i> to be vulnerable enough to need. And for a lot of us, that's really hard, because having needs means looking inside, knowing where we’re incomplete, and letting someone else see that too. You just can't do that if you're in denial about those parts of yourself, if you can’t be okay with the fact your shortcomings are a real part of you. That’s what these lyrics are about - one partner telling the other, accept yourself enough to trust me to see inside and still love you. That’s how you can love me. That girl’s a catch.
+    `
   }
 }
 
@@ -207,7 +209,7 @@ const song10 = {
   },
   explainer: {
     heading: 'Song: Mad Season | Artist: Matchbox 20 | Album: Mad Season',
-    text: ''
+    text: `Oof. It’s classic Matchbox 20 to sing about a dysfunctional relationship, and this line stands out to me because of the casual, nonchalant yet subtly seething tone of the singer’s observation that hey, I thought this relationship was really deep, I thought this whole time we were together you noticed me, learned about me, cared about who I was. I relied on that, trusted that. Um, guess not? Part of what I love about these lyrics is the way they’re not dramatic. There’s something almost funny about them. And there’s something dignified about them too, how he’s not falling to pieces, this horrible realization hits him yet he’s passive-aggressively playing the detached observer musing about it. So much personality in this, wow.`
   }
 }
 
