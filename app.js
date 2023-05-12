@@ -243,7 +243,6 @@ let hint4
 let gameOver = 0
 let songObjects = [...songObjectsHardCode]
 let popupSetting
-//let noClick = false
 
 //********************* Cached Elements *********************
 const readyMessageEl = document.getElementById('ready')
