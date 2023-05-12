@@ -454,7 +454,6 @@ const lose = () => {
 //This is code for a multi-functional button that will change
 //depending on which popup is displaying
 const next = () => {
-  currentSongClip.pause()
   renderScoreBar()
   hidePopUp()
   if (popupSetting === 'difficulty') {
@@ -467,6 +466,7 @@ const next = () => {
     popupSetting = ''
     return
   }
+  currentSongClip.pause()
   if (gameOver === 1) {
     popupSetting = ''
     win()
