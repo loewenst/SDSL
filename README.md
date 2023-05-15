@@ -102,4 +102,4 @@ I call the user’s attention to the play button by toggling between different C
 </br>
 
 Thanks to the GE instructors for helping me out with different parts of the code, especially Ashley Sands and Jan Horak.</br></br>
-Thanks to GE SEI-R-4-24 Pod 3 (you know who you are) for all the chances to learn from your code and to talk things out. Special shoutout to Anthony Medina for pointing me to some solid sound libraries.
+Thanks to GE SEI-R-4-24 Pod 3 (you know who you are) for all the chances to learn from your code and to talk things out. Special shoutout to Anthony Medina for pointing me to some solid sound libraries.</br></br>Thanks to Pixabay and Orange Free Sounds for the win, lose and reveal sounds. </br></br>And, obviously, a big thank you to all those amazing lyricists out there - none of whose music I own or lay any claim to - thanks for putting words to those things we knew but couldn't express, or didn't know but now can enrich our lives.
