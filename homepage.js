@@ -25,8 +25,8 @@ const contact = {
 
 const discuss = {
   Title: 'Thanks',
-  InnerHTML: `Thanks to the GE instructors for helping me out with different parts of the code, especially Ashley Sands and Jan Horak.</br></br>
-  Thanks to GE SEI-R-4-24 Pod 3 (you know who you are) for all the chances to learn from your code and to talk things out. Special shoutout to Anthony Medina for pointing me to some solid sound libraries.`
+  InnerHTML: `Thanks to the GA instructors for helping me out with different parts of the code, especially Ashley Sands and Jan Horak.</br></br>
+  Thanks to GA SEI-R-4-24 Pod 3 (you know who you are) for all the chances to learn from your code and to talk things out. Special shoutout to Anthony Medina for pointing me to some solid sound libraries.`
 }
 
 const popupObjects = [howto, about, contact, discuss]

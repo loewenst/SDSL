@@ -275,6 +275,7 @@ let gameOver = 0
 let songObjects = [...songObjectsHardCode]
 let popupSetting
 let canChoose
+let volume = true
 
 //********************* Cached Elements *********************
 const readyMessageEl = document.getElementById('ready')
@@ -295,6 +296,7 @@ const resetEl = document.getElementById('reset')
 const difficultyEl = document.getElementById('difficulty')
 const nextEl = document.getElementById('next')
 const commentEl = document.getElementById('comment')
+const volumeEl = document.getElementById('volume')
 
 //********************* Functions *********************
 
@@ -419,6 +421,32 @@ const reset = () => {
   startEls.forEach((startEl) => {
     startEl.style.visibility = 'visible'
   })
+}
+
+//Volume Controls
+const toggleVolume = () => {
+  const audios = [...document.querySelectorAll('audio')]
+  if (volume === true) {
+    volumeEl.className = 'fa fa-volume-off'
+    volume = false
+    audios.forEach((el) => (el.muted = true))
+    currentSongClip.muted = true
+    reveal.muted = true
+    rightAudio.muted = true
+    wrongAudio.muted = true
+
+    return
+  }
+  if (volume === false) {
+    volumeEl.className = 'fa fa-volume-up'
+    volume = true
+    audios.forEach((el) => (el.muted = false))
+    currentSongClip.muted = false
+    reveal.muted = false
+    rightAudio.muted = false
+    wrongAudio.muted = false
+    return
+  }
 }
 
 //POPUP
@@ -618,3 +646,4 @@ document
   .getElementById('difficulty')
   .addEventListener('click', changeDifficulty)
 document.getElementById('comment').addEventListener('click', comment)
+document.getElementById('volume').addEventListener('click', toggleVolume)
