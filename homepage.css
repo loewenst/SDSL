@@ -3,8 +3,8 @@
   font-family:'Dosis', sans-serif;
 }
 body {
+  background-color: black;
   background-image: url(https://i.imgur.com/b4m7vyE.jpg);
-  height: 100vmin;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

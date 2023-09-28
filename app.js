@@ -453,7 +453,7 @@ const toggleVolume = () => {
 const win = () => {
   popupHeadingEl.innerHTML = 'CONGRATULATIONS! YOU WON!'
   popupTextEl.innerHTML =
-    'I hope you found these lyrics as profound and hard-hitting as I did. </br></br></br> Play again to see even more lyrics! </br> Or, challenge yourself by tweaking the difficulty.'
+    'I hope you found these lyrics as profound </br> and hard-hitting as I did. </br></br></br> Play again to see even more lyrics! </br> Or, challenge yourself by tweaking the difficulty.'
   popupEl.style.visibility = 'visible'
   resetEl.style.visibility = 'visible'
   resetEl.style.backgroundColor = 'rgb(231, 171, 67)'
@@ -469,7 +469,7 @@ const win = () => {
 const lose = () => {
   popupHeadingEl.innerHTML = 'SORRY! BETTER LUCK NEXT TIME'
   popupTextEl.innerHTML =
-    'I hope you found these lyrics as profound and hard-hitting as I did. </br></br></br> If you did, why not play again, </br>for a chance to see even more </br> Surprisingly Deep Song Lyrics!'
+    'I hope you found these lyrics as profound </br> and hard-hitting as I did. </br></br></br> If you did, why not play again, </br>for a chance to see even more </br> Surprisingly Deep Song Lyrics!'
   popupEl.style.visibility = 'visible'
   resetEl.style.visibility = 'visible'
   resetEl.style.backgroundColor = 'rgb(231, 171, 67)'
@@ -521,7 +521,9 @@ const displayExplainer = () => {
   nextEl.innerHTML = 'Next'
   commentEl.style.visibility = 'hidden'
   currentSongClip = new Audio(currentSong.clip)
-  currentSongClip.play()
+  if (volume) {
+    currentSongClip.play()
+  }
 }
 
 const choose = (evt) => {
@@ -534,12 +536,16 @@ const choose = (evt) => {
   evt.target.className = 'selectedAnswer'
   let currentScoreBox = scoreArray.indexOf(0)
   canChoose = false
-  reveal.play()
+  if (volume) {
+    reveal.play()
+  }
   timer = setTimeout(() => {
     if (evt.target.innerText === currentSong.artist) {
       evt.target.className = 'correctAnswer'
       scoreArray[currentScoreBox] = 1
-      rightAudio.play()
+      if (volume) {
+        rightAudio.play()
+      }
     } else {
       evt.target.className = 'wrongAnswer'
       answerEls.forEach((answerEl) => {
@@ -548,7 +554,9 @@ const choose = (evt) => {
         }
       })
       scoreArray[currentScoreBox] = -1
-      wrongAudio.play()
+      if (volume) {
+        wrongAudio.play()
+      }
     }
     if (scoreArray[9] === 1) {
       gameOver = 1
@@ -557,10 +565,6 @@ const choose = (evt) => {
     }
     setTimeout(displayExplainer, 1000)
   }, 3000)
-}
-
-const noChoose = () => {
-  canChoose = false
 }
 
 const populateQuestion = () => {

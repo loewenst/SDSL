@@ -3,6 +3,7 @@
   font-family:'Dosis', sans-serif;
 }
 body {
+  background-color: black;
   background-image: url(https://i.imgur.com/b4m7vyE.jpg);
   height: 100vmin;
   background-repeat: no-repeat;
@@ -117,20 +118,32 @@ button:hover {
   background-color: grey;
   border-radius: 5%;
   visibility: hidden;
+  overflow: clip;
 }
-#popup > h3 {
+#popup > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#popupHeading {
   text-align: center;
-  padding: 3vh 0 3vh 0;
+  padding: 3vh 5px 3vh 5px;
   width: 100%;
   font-weight: 700;
   background-color: rgb(101, 95, 95);
   font-size: 3.5vmin;
+  margin-top: 0;
   
 }
-#popup > div {
+#prompt, #popupButtons {
   width: 90%;
   text-align: center;
   font-size: 3vmin;
+}
+#prompt {
+  margin-top: 3vh;
 }
 #comment, #next {
   color: white;
@@ -169,6 +182,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   font-style: italic;
+  padding: 5px;
 }
 #answerspace {
   display: flex;
@@ -313,4 +327,49 @@ button:hover {
   width: 50px;
   font-size: 50px;
   color: rgb(216, 216, 216)
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    margin-top: 75px;
+    font-size: 3.5vh;
+  }
+  body {
+    background-image: none;
+  }
+  #gamespace {
+    margin-top: 6vh;
+  }
+  #volume, #home {
+    font-size: 30px;
+  }
+  #volume {
+    left: 65px;
+  }
+  #answerspace {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+  }
+  .answer, .selectedAnswer, .wrongAnswer, .correctAnswer {
+    width: 45vw;
+    height: 6vh;
+    margin-top: 1vh;
+    font-size: 3vmin;
+  }
+  #popup {
+    top: 12vh;
+    right: 10vw;
+    height: 80vh;
+    width: 80vw;
+  }
+  #question {
+    font-size: 4vmin;
+  }
+  #prompt {
+    width: 80%;
+    font-size: 4vmin;
+  }
 }

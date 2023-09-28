@@ -20,7 +20,7 @@ const about = {
 
 const contact = {
   Title: 'Contact',
-  InnerHTML: `Have some feedback? Found a bug? Want to recommend another song to add to the game? </br></br> Send me an email!</br>I'd love to hear from you.</br></br><form action="mailto:dzl205@nyu.edu" method="post" enctype="text/plain"><input type="text" size="80"></form>`
+  InnerHTML: `Have some feedback? Found a bug? Want to recommend another song to add to the game? </br></br> Send me an email!</br>I'd love to hear from you.</br></br><form action="mailto:dzl205@nyu.edu" method="get" enctype="text/plain"><textarea name="body" rows="5" cols="120"></textarea></br><input type="submit" value="Send"></form>`
 }
 
 const discuss = {
