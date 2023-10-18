@@ -28,9 +28,9 @@ And a special thanks to my peers and instructors at [General Assembly](https://g
 ## Feature Updates
 
 - [x] Volume Controls _Updated 9.20.23_
-- [] Mobile-Friendly _In Progress_
-- [] Timer
-- [] Background Music
+- [ ] Mobile-Friendly _In Progress_
+- [ ] Timer
+- [ ] Background Music
 
 ## Additional Info
 
