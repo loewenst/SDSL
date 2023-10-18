@@ -2,24 +2,20 @@
 
 Welcome to Surprisingly Deep Song Lyrics, the Millionaire-style quiz game that tests, teaches and inspires. And just has some great music. The live site lives [here](https://sdsl.surge.sh/).
 
-![techstack](./images/badge.svg)
+![techstack](./images/Made%20With-HTML%20_%20CSS%20_%20Javascript-.svg)
 
 ## Table of Contents
 
 - [What is SDSL?](#what-is-sdsl)
 - [Credits](#credits)
+- [Feature Updates](#feature-updates)
 - [Additional Info](#additional-info)
-- [Feature Updates]
 
 ## What is SDSL?
 
 Surprisingly Deep Song Lyrics (SDSL) works largely the same way as Who Wants to be a Millionaire: there are a series of questions, with four possible answers to each one, and if you get all the questions right, you win. Get a question wrong, you lose. There are even hints you can use - three per turn on easy mode, and three for the whole game on hard - kind of like Millionaire’s lifelines.
 
 The main difference (besides for not actually being able to win a million dollars) is that all the "questions" are song lyrics, and the answers are artists, one of which sang the song with the lyrics being displayed. And, because the deeper purpose of this game is to showcase the awesome depth song lyrics can have, after each question a popup displays some of my reflections on why the lyrics pack a punch. You'll probably skip these if you're just here to play, but if you're looking for something deeper, I think they're worth the read.
-
-[GitHub](https://github.com/loewenst) | [LinkedIn](https://www.linkedin.com/in/daniel-loewenstein-849a67213/)
-
-<img src="images/Game Flow Updated.jpg">
 
 ## Credits
 
