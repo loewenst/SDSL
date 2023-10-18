@@ -87,13 +87,17 @@ button:hover {
 #reset {
   position: absolute;
   bottom: 25px;
-  right: 175px;
+  right: 25px;
   width: 100px;
   visibility: hidden;
   font-size: 14px;
   height: 50px;
   border-radius: 15%;
-  
+  animation: bounce 1s ease-in-out infinite alternate;
+}
+@keyframes bounce {
+  0% {scale: 1}
+  100% {scale: 1.5}
 }
 #difficulty {
   position: absolute;
@@ -103,7 +107,6 @@ button:hover {
   font-size: 14px;
   height: 50px;
   border-radius: 15%;
-
 }
 #popup {
   position: absolute;
@@ -298,18 +301,6 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
-.bounce1 {
-  transform: scale(1.5);
-  transition-property: transform;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.5s;
-}
-.bounce2 {
-  transform: scale(1);
-  transition-property: transform;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.5s;
-}
 #home {
   position: absolute;
   top: 25px;
@@ -370,6 +361,15 @@ button:hover {
   }
   #prompt {
     width: 80%;
-    font-size: 4vmin;
+    font-size: 16px;
+  }
+  #next, #comment {
+    width: 30%;
+    height: 40px;
+  }
+  #reset {
+    right: 50%;
+    margin-right: -50px;
+    bottom: 15vh;
   }
 }

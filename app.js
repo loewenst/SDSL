@@ -384,12 +384,12 @@ const bounce = (el) => {
   }, 500)
 }
 
-//POPUP
+//POPUP BUTTON
 const comment = () => {
   hidePopUp()
   if (popupSetting === 'difficulty') {
     hardHints = false
-    reset()
+    // reset()
     popupSetting = ''
     return
   }
@@ -417,7 +417,7 @@ const reset = () => {
   gameOver = 0
   clearAnswerSpace()
   resetEl.style.visibility = 'hidden'
-  difficultyEl.style.visibility = 'hidden'
+  difficultyEl.style.visibility = 'visible'
   startEls.forEach((startEl) => {
     startEl.style.visibility = 'visible'
   })
@@ -461,8 +461,6 @@ const win = () => {
   difficultyEl.style.backgroundColor = 'rgb(231, 171, 67)'
   nextEl.style.visibility = 'hidden'
   commentEl.style.visibility = 'hidden'
-  bounce(resetEl)
-  bounce(difficultyEl)
 }
 
 //POPUP
@@ -475,7 +473,6 @@ const lose = () => {
   resetEl.style.backgroundColor = 'rgb(231, 171, 67)'
   nextEl.style.visibility = 'hidden'
   commentEl.style.visibility = 'hidden'
-  bounce(resetEl)
 }
 
 //POPUP
@@ -486,7 +483,7 @@ const next = () => {
   hidePopUp()
   if (popupSetting === 'difficulty') {
     hardHints = true
-    reset()
+    // reset()
     popupSetting = ''
     return
   }
