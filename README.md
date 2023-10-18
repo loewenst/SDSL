@@ -19,7 +19,7 @@ The main difference (besides for not actually being able to win a million dollar
 
 ## Credits
 
-The win, lose and reveal audios came from [Pixabay]() and [Orange Free Sounds](). And thanks to [Anthony Medina]() for pointing them out to me.
+The win, lose and reveal audios came from [Pixabay](https://pixabay.com/sound-effects/) and [Orange Free Sounds](https://orangefreesounds.com/). And thanks to [Anthony Medina](https://www.linkedin.com/in/anthonyjmedina/) for pointing them out to me.
 
 All of the lyrics and music obviously belong to the amazing artists that created them. I won't be naming names, of course - spoilers! - but thanks for putting words to those things we knew but couldn't express, or didn't know but now can enrich our lives.
 
