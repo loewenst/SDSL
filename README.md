@@ -1,6 +1,6 @@
 # SDSL: Surprisingly Deep Song Lyrics
 
-Welcome to Surprisingly Deep Song Lyrics, the _Millionaire_-style quiz game that tests, teaches and inspires. And just has some great music. The live site lives [here](https://sdsl.surge.sh/).
+Welcome to Surprisingly Deep Song Lyrics, the _Millionaire_-style quiz game that tests, teaches and inspires! And just has some great music. The live site lives [here](https://sdsl.surge.sh/).
 
 ![techstack](./images/Made%20With-HTML%20_%20CSS%20_%20Javascript-.svg)
 
