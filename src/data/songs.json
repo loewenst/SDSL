@@ -1,0 +1,312 @@
+[
+  {
+    "id": 1,
+    "lyrics": "Don’t it make you sad to know that life\nis more than who we are",
+    "choices": [
+      "The Goo Goo Dolls",
+      "The Smashing Pumpkins",
+      "All Time Low",
+      "Counting Crows"
+    ],
+    "artist": "The Goo Goo Dolls",
+    "hints": [
+      {
+        "type": "text",
+        "content": "This song was released in September 1995."
+      },
+      {
+        "type": "text",
+        "content": "The band’s biggest hit was part of the soundtrack for <i>City of Angels</i>."
+      },
+      {
+        "type": "text",
+        "content": "Here are some other lyrics from the song:\n\nYou grew up way too fast\nAnd now there’s nothing to believe\nThen reruns all become our history\nA tired song keeps playing on a tired radio\nAnd I won’t tell no one your name"
+      },
+      {
+        "type": "audio",
+        "content": "/audio/Name Hint.wav"
+      }
+    ],
+    "explainer": {
+      "heading": "Song: Name — Artist: The Goo Goo Dolls — Album: A Boy Named Goo",
+      "text": "This line always struck home because of the way it acknowledges that the things that are important to us in our own little lives probably seem petty and insignificant if we just draw back the lens and think beyond ourselves — but it doesn’t make the point in a moralizing way. It’s not saying, “Stop caring about the things that don’t matter,” it’s saying, hey, the fact that the things you care about don’t matter to the wider world — that really sucks, doesn’t it? And that’s so validating to hear."
+    },
+    "clip": "/audio/Name Clip.wav"
+  },
+  {
+    "id": 2,
+    "lyrics": "My dreams are bursting at the seams",
+    "choices": [
+      "Owl City",
+      "Taylor Swift",
+      "Backstreet Boys",
+      "A Great Big World"
+    ],
+    "artist": "Owl City",
+    "hints": [
+      {
+        "type": "text",
+        "content": "This song was inspired by the singer’s insomnia."
+      },
+      {
+        "type": "text",
+        "content": "Here are some other lyrics from the song:\n\nA foxtrot above my head\nA sock hop beneath my bed\nA disco ball is just hanging by a thread"
+      },
+      {
+        "type": "text",
+        "content": "The artist was asked to produce a pop version of “Waving through the Window” by the writers of “Dear Evan Hansen.”"
+      },
+      {
+        "type": "image",
+        "content": "/images/Fireflies Robot.png"
+      }
+    ],
+    "explainer": {
+      "heading": "Song: Fireflies — Artist: Owl City — Album: Ocean Eyes",
+      "text": "It’s basically a signature for Owl City (a.k.a. Adam Young) to write songs that are optimistic, unjaded, and full of imagination and childlike wonder. This line feels like a peek into the mind behind that signature — a mind flooded with so many hopes and ideas and excitement about the possibilities of the future that it feels like it could burst. To me, it lands as a reminder to tamp down the cynicism, and aspire for some of that wonder and excitement about the open future."
+    },
+    "clip": "/audio/Fireflies Clip.wav"
+  },
+  {
+    "id": 3,
+    "lyrics": "Oh, where do we begin?\nThe rubble, or our sins?",
+    "choices": ["Creed", "Bastille", "Imagine Dragons", "Panic! at the Disco"],
+    "artist": "Bastille",
+    "hints": [
+      {
+        "type": "text",
+        "content": "Another of the band’s singles featured Marshmello."
+      },
+      {
+        "type": "text",
+        "content": "This song was released in 2013 and is named after an ancient city."
+      },
+      {
+        "type": "text",
+        "content": "Here are some other lyrics from the song:\n\nAnd if you close your eyes\nDoes it almost feel like you’ve been here before?\nHow am I gonna be an optimist about this?"
+      },
+      {
+        "type": "audio",
+        "content": "/audio/Pompeii Hint.wav"
+      }
+    ],
+    "explainer": {
+      "heading": "Song: Pompeii — Artist: Bastille — Album: Bad Blood",
+      "text": "Tragedy is a part of life. It happens to everyone at some point, even if not usually on the scale of Pompeii getting obliterated by a volcano. And sometimes the tragedy just happens, but sometimes it feels like we bring it on ourselves, because of our bad decisions, karma, or whatever it is. And when you’re picking up the pieces after that kind of tragedy, boy does this question pack a punch. Do I start with the logistics of my life that have to change? Or do I start with my attitude, my selfishness, my fear of commitment, or whatever landed me there? Where do we begin?"
+    },
+    "clip": "/audio/Pompeii Clip.wav"
+  },
+  {
+    "id": 4,
+    "lyrics": "I can’t remember all the times I tried to tell myself\nto hold on to these moments as they pass",
+    "choices": [
+      "Counting Crows",
+      "The Wallflowers",
+      "Jack's Mannequin",
+      "Dave Matthews Band"
+    ],
+    "artist": "Counting Crows",
+    "hints": [
+      {
+        "type": "text",
+        "content": "The music video for this song features Courteney Cox."
+      },
+      {
+        "type": "text",
+        "content": "Some of the band’s other singles include “Round Here” and “Mr. Jones.”"
+      },
+      {
+        "type": "text",
+        "content": "Here are some other lyrics from the song:\n\nAnd it’s one more day up in the canyons\nAnd it’s one more night in Hollywood\nIf you think that I could be forgiven\nI wish you would"
+      },
+      {
+        "type": "audio",
+        "content": "/audio/Long December Hint.wav"
+      }
+    ],
+    "explainer": {
+      "heading": "Song: A Long December — Artist: Counting Crows — Album: Recovering the Satellites",
+      "text": "This line captures a crazy thing about being human: just because you were there doesn’t mean you experienced it. Even in the very best moments, if you’re not present, if you’re consumed with something else, dwelling on the past or worrying about the future, then you miss it. But even if you know it, that doesn’t make it easy. You can try and try to be present and fail, and feel like the best things are passing you by but you can’t get out of your head long enough to feel them. We just gotta keep trying. (And meditate!)"
+    },
+    "clip": "/audio/Long December Clip.wav"
+  },
+  {
+    "id": 5,
+    "lyrics": "We got the bubble-headed bleach-blonde who comes on at five\nShe can tell you about the plane crash with a gleam in her eye\nIt’s interesting when people die",
+    "choices": ["Don Henley", "U2", "Panic! at the Disco", "Green Day"],
+    "artist": "Don Henley",
+    "hints": [
+      {
+        "type": "text",
+        "content": "The singer was also part of the band that sang <i>Hotel California</i>."
+      },
+      {
+        "type": "text",
+        "content": "Some of the artist’s other singles include “The End of the Innocence” and “The Last Worthless Evening.”"
+      },
+      {
+        "type": "text",
+        "content": "Here are some other lyrics from the song:\n\nKick ’em when they’re up\nKick ’em when they’re down\nKick ’em when they’re up\nKick ’em all around"
+      },
+      {
+        "type": "audio",
+        "content": "/audio/Dirty Laundry Hint.wav"
+      }
+    ],
+    "explainer": {
+      "heading": "Song: Dirty Laundry — Artist: Don Henley — Album: I Can’t Stand Still",
+      "text": "This song, a cutting indictment of the news media, feels like it could’ve been written yesterday as easily as 1982. Henley calls out the industry for the fact that it has a built-in incentive to report tragic, scandalous or otherwise sensational news, and thus warps the ways news personnel experience all those things. The song implicitly calls for us to figure out a way for the news media to be able to inform while also being able to stay human."
+    },
+    "clip": "/audio/Dirty Laundry Clip.wav"
+  },
+  {
+    "id": 6,
+    "lyrics": "So when weakness turns my ego up\nI know you’ll count on the me from yesterday",
+    "choices": ["Incubus", "Panic! at the Disco", "Hoobastank", "3 Doors Down"],
+    "artist": "Incubus",
+    "hints": [
+      {
+        "type": "text",
+        "content": "Some of the artist’s albums include <i>Make Yourself</i> and <i>Morning View</i>."
+      },
+      {
+        "type": "text",
+        "content": "The lead singer is also skilled at painting, and has published collections of his artwork."
+      },
+      {
+        "type": "text",
+        "content": "Here are some other lyrics from the song:\n\nSing this song\nRemind me that we’ll always have each other\nWhen everything else is gone"
+      },
+      {
+        "type": "image",
+        "content": "/images/Dig Image.jpeg"
+      }
+    ],
+    "explainer": {
+      "heading": "Song: Dig — Artist: Incubus — Album: Light Grenades",
+      "text": "We’re never the same person all the time with everyone in every situation. And sometimes who we are at a given point in time can be a little ugly. But if we’re lucky, we have people in our lives that can see through who we happen to be at our low points, to who we were before, or who we are at our best. And if we’re really lucky, they can help us find our way back or our way out. This song celebrates having that kind of relationship."
+    },
+    "clip": "/audio/Dig Clip.wav"
+  },
+  {
+    "id": 7,
+    "lyrics": "Hope that you spend your days\nbut they all add up",
+    "choices": ["Jason Mraz", "Imagine Dragons", "OneRepublic", "Matchbox 20"],
+    "artist": "OneRepublic",
+    "hints": [
+      {
+        "type": "text",
+        "content": "The artist’s first hit single was mixed and released by Timbaland."
+      },
+      {
+        "type": "text",
+        "content": "Some of the artist’s albums include <i>Dreaming Out Loud</i>, <i>Oh My My</i> and <i>Waking Up</i>."
+      },
+      {
+        "type": "text",
+        "content": "Here are some other lyrics from the song:\n\nI owned every second that this world could give\nI saw so many places, the things that I did\nYeah, with every broken bone\nI swear I lived"
+      },
+      {
+        "type": "image",
+        "content": "/images/I Lived Image.jpeg"
+      }
+    ],
+    "explainer": {
+      "heading": "Song: I Lived — Artist: OneRepublic — Album: Native",
+      "text": "This clever play on words, paradoxically wishing for us to have more after we spend everything, is a nod to two pitfalls in life: one, letting our time go by instead of <i>spending</i> it — using it, choosing how we use it — and two, regretting our experiences because they don’t fit the narrative we want. Here’s to hoping we grab life by the horns and love the ride for what it is."
+    },
+    "clip": "/audio/I Lived Clip.wav"
+  },
+  {
+    "id": 8,
+    "lyrics": "Oh yeah, life goes on\nlong after the thrill of living is gone",
+    "choices": [
+      "John Mellencamp",
+      "Johnny Cash",
+      "My Chemical Romance",
+      "Fall Out Boy"
+    ],
+    "artist": "John Mellencamp",
+    "hints": [
+      {
+        "type": "text",
+        "content": "Some of the artist’s other songs include <i>Pink Houses</i> and <i>Hurts So Good</i>."
+      },
+      {
+        "type": "text",
+        "content": "The artist cofounded Farm Aid, which has raised over $60 million for farm families."
+      },
+      {
+        "type": "text",
+        "content": "Here are some other lyrics from the song:\n\nHoldin’ on to sixteen as long as you can\nChange is coming ’round real soon\nMake us women and men"
+      },
+      {
+        "type": "image",
+        "content": "/images/Jack and Diane Image.png"
+      }
+    ],
+    "explainer": {
+      "heading": "Song: Jack and Diane — Artist: John Mellencamp — Album: American Fool",
+      "text": "I must have heard this song fifty times before I really paid attention to these words — the wistful, folksy tone doesn’t lead you to expect lyrics that are so heavy. The song is about two high school sweethearts growing up, and the fun and optimism and ambition of being a teenager that disappears as you get older. We might all try “holding on to sixteen as long as you can,” but at the end of the day, life gets less shiny, the colors get a little more dull, but it still goes on. (Which makes it wonderfully ironic that Jessica Simpson sampled this track for a bubblegum pop love song.)"
+    },
+    "clip": "/audio/Jack and Diane Clip.wav"
+  },
+  {
+    "id": 9,
+    "lyrics": "She said like it or not it’s the way it’s gotta be\nYou’ve gotta love yourself if you can ever love me",
+    "choices": ["Lifehouse", "*N SYNC", "Maroon 5", "John Legend"],
+    "artist": "Lifehouse",
+    "hints": [
+      {
+        "type": "text",
+        "content": "The artist’s first album was <i>No Name Face</i>."
+      },
+      {
+        "type": "text",
+        "content": "Several of the artist’s songs were featured on the show <i>Smallville</i>."
+      },
+      {
+        "type": "text",
+        "content": "Here are some other lyrics from the song:\n\nI know what’s at stake\nI know that I’ve let you down\nAnd if you give me a chance\nBelieve that I can change\nI’ll keep us together"
+      },
+      {
+        "type": "audio",
+        "content": "/audio/Whatever It Takes Hint.wav"
+      }
+    ],
+    "explainer": {
+      "heading": "Song: Whatever It Takes — Artist: Lifehouse — Album: Who We Are",
+      "text": "A huge part of being a good friend or partner is listening, supporting, and bringing good vibes. But that’s one sided, even if it is the “nicer” side. In the deepest relationships, both sides have to be generous enough to be there when needed, <i>and</i> vulnerable enough to need. And for a lot of us that’s really hard, because having needs means looking inside, knowing where we’re incomplete, and letting someone else see that. That’s what these lyrics are about — one partner telling the other: accept yourself enough to trust me to see inside and still love you. That’s how you can love me. Just saying, that girl’s a catch."
+    },
+    "clip": "/audio/Whatever It Takes Clip.wav"
+  },
+  {
+    "lyrics": "You don't know me now </br> I kinda thought that you should somehow",
+    "choices": ["Matchbox 20", "Justin Bieber", "Nickelback", "The Weeknd"],
+    "artist": "Matchbox 20",
+    "hints": [
+      {
+        "type": "text",
+        "content": "The singer of this song collaborated with Santana, making a track that won three Grammys and <i>Billboard</i> lists as the third most-successful song ever."
+      },
+      {
+        "type": "text",
+        "content": "The artist's debut album was <i>Yourself or Someone Like You</i>."
+      },
+      {
+        "type": "text",
+        "content": "Here are some other lyrics from the song: </br></br>Do you think you can cope? </br> You figured me out </br>That I'm lost and I'm hopeless </br>I'm bleeding and broken </br> Though I've never spoken </br> I come undone"
+      },
+      {
+        "type": "audio",
+        "content": "audio/Mad Season Hint.wav"
+      }
+    ],
+    "explainer": {
+      "heading": "Song: Mad Season | Artist: Matchbox 20 | Album: Mad Season",
+      "text": "Oof. It’s classic Matchbox 20 to sing about a dysfunctional relationship, and this line stands out to me because of the casual, nonchalant yet subtly seething tone of the singer’s observation that hey, I thought this relationship was really deep, I thought this whole time we were together you noticed me, learned about me, cared about who I was. I relied on that, trusted that. Um, guess not? Part of what I love about these lyrics is the way they’re not dramatic. There’s something almost funny about them. And there’s something dignified about them too, how he’s not falling to pieces, this horrible realization hits him yet he’s passive-aggressively playing the detached observer musing about it. So much personality in this, wow."
+    },
+    "clip": "audio/Mad Season Clip.wav",
+    "id": 10
+  }
+]
