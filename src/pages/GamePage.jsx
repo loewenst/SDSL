@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react'
-import { useGameState }   from '../hooks/useGameState'
-import { useAudio }       from '../hooks/useAudio'
-import { ScoreBar }       from '../components/ScoreBar'
-import { LyricDisplay }   from '../components/LyricDisplay'
-import { AnswerGrid }     from '../components/AnswerGrid'
-import { HintBar }        from '../components/HintBar'
-import { Modal }          from '../components/Modal'
-import { Toast }          from '../components/Toast'
-import { HomeButton }     from '../components/HomeButton'
-import { VolumeToggle }   from '../components/VolumeToggle'
-import { StartOverlay }   from '../components/StartOverlay'
+import { useGameState }      from '../hooks/useGameState'
+import { useAudio }          from '../hooks/useAudio'
+import { ScoreBar }          from '../components/ScoreBar'
+import { LyricDisplay }      from '../components/LyricDisplay'
+import { AnswerGrid }        from '../components/AnswerGrid'
+import { HintBar }           from '../components/HintBar'
+import { Modal }             from '../components/Modal'
+import { Toast }             from '../components/Toast'
+import { VolumeToggle }      from '../components/VolumeToggle'
+import { StartOverlay }      from '../components/StartOverlay'
+import { HowToPlayModal }    from '../components/HowToPlayModal'
+import { AboutModal }        from '../components/AboutModal'
 
 export default function GamePage() {
   const {
@@ -29,6 +30,9 @@ export default function GamePage() {
 
   // Local toast state for "no hints remaining" notification.
   const [toast, setToast] = useState(null)
+
+  // Local state for info modals (How to Play / About).
+  const [infoModal, setInfoModal] = useState(null) // 'howto' | 'about' | null
 
   // --- Audio triggers ---
 
@@ -88,7 +92,18 @@ export default function GamePage() {
 
         {/* Header row */}
         <div className="flex items-center px-4 pt-4 pb-2 gap-2">
-          <HomeButton />
+          <button
+            onClick={() => setInfoModal('howto')}
+            className="text-gray-300 hover:text-white font-dosis text-sm font-semibold transition-colors duration-150 px-2 py-1"
+          >
+            How to Play
+          </button>
+          <button
+            onClick={() => setInfoModal('about')}
+            className="text-gray-300 hover:text-white font-dosis text-sm font-semibold transition-colors duration-150 px-2 py-1"
+          >
+            About
+          </button>
           <VolumeToggle volume={state.volume} onToggle={toggleVolume} />
           <h1 className="flex-1 text-center font-dosis font-bold text-game-blue text-[clamp(1.1rem,4vmin,2rem)] pr-12 md:pr-0">
             Surprisingly Deep Song Lyrics
@@ -174,6 +189,10 @@ export default function GamePage() {
 
       {/* ── Toast ── */}
       <Toast message={toast} />
+
+      {/* ── Info modals ── */}
+      {infoModal === 'howto' && <HowToPlayModal onClose={() => setInfoModal(null)} />}
+      {infoModal === 'about' && <AboutModal     onClose={() => setInfoModal(null)} />}
     </div>
   )
 }
