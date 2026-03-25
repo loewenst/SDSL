@@ -11,6 +11,7 @@ import { VolumeToggle }      from '../components/VolumeToggle'
 import { StartOverlay }      from '../components/StartOverlay'
 import { HowToPlayModal }    from '../components/HowToPlayModal'
 import { AboutModal }        from '../components/AboutModal'
+import { assetUrl }          from '../utils/assetUrl'
 
 export default function GamePage() {
   const {
@@ -38,18 +39,18 @@ export default function GamePage() {
 
   useEffect(() => {
     if (state.answerState === 'pending') {
-      playSound('/audio/Answer Reveal.wav')
+      playSound(assetUrl('/audio/Answer Reveal.wav'))
     }
   }, [state.answerState, playSound])
 
   useEffect(() => {
-    if (state.answerState === 'correct') playSound('/audio/Correct Answer.wav')
-    if (state.answerState === 'wrong')   playSound('/audio/Wrong Answer.wav')
+    if (state.answerState === 'correct') playSound(assetUrl('/audio/Correct Answer.wav'))
+    if (state.answerState === 'wrong')   playSound(assetUrl('/audio/Wrong Answer.wav'))
   }, [state.answerState, playSound])
 
   useEffect(() => {
     if (state.modal?.type === 'explainer' && state.currentSong) {
-      playClip(state.currentSong.clip)
+      playClip(assetUrl(state.currentSong.clip))
     } else {
       stopClip()
     }

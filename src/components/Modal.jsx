@@ -1,4 +1,5 @@
 // Unified modal component used for hints, explainers, win/lose, and difficulty settings.
+import { assetUrl } from '../utils/assetUrl'
 // The type field on `modal` determines layout and buttons.
 
 // Converts \n to <br> and preserves existing HTML tags (used for trusted internal data only).
@@ -19,7 +20,7 @@ function HintContent({ hint }) {
         <p className="text-sm text-gray-300 font-dosis">Here is a clip from the song:</p>
         {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
         <audio controls className="w-full max-w-xs">
-          <source src={hint.content} type="audio/wav" />
+          <source src={assetUrl(hint.content)} type="audio/wav" />
           Your browser does not support the audio element.
         </audio>
       </div>
@@ -30,7 +31,7 @@ function HintContent({ hint }) {
       <div className="flex flex-col items-center gap-3">
         <p className="text-sm text-gray-300 font-dosis">Here is an image from the music video:</p>
         <img
-          src={hint.content}
+          src={assetUrl(hint.content)}
           alt="Music video still"
           className="max-w-full max-h-48 rounded-lg object-contain"
         />
