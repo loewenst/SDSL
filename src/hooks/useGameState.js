@@ -179,6 +179,8 @@ export function useGameState() {
 
   // Called when the user clicks "Next" inside the explainer modal.
   function advanceFromExplainer() {
+    dispatch({ type: 'CLOSE_MODAL' })
+
     if (state.gameResult === 'win') {
       dispatch({ type: 'SET_GAMEOVER', modal: { type: 'win' } })
       return
